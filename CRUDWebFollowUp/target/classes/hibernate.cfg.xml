@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd"> 
+    
+<hibernate-configuration>
+    <session-factory>        
+        <mapping class="com.web.model.FollowupA1" />
+        <mapping class="com.web.model.FollowupA2" />
+        <mapping class="com.web.model.FollowupA3" />
+         <mapping class="com.web.model.FollowupB1" />
+         <mapping class="com.web.model.FollowupB4" />
+         <mapping class="com.web.model.FollowupB5" />
+         <mapping class="com.web.model.FollowupB6" />
+         <mapping class="com.web.model.FollowupB7" />
+         <mapping class="com.web.model.FollowupB8" />
+         <mapping class="com.web.model.FollowupB9" />
+         <mapping class="com.web.model.FollowupC1" />
+         <mapping class="com.web.model.FollowupC2" />
+         <mapping class="com.web.model.FollowupD1" />
+         <mapping class="com.web.model.FollowupD2" />
+    </session-factory>         
+</hibernate-configuration>
