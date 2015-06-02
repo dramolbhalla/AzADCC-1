@@ -11,26 +11,23 @@ import com.web.model.FollowupA2;
 import com.web.service.FollowupA2Service;
 
 @Service
-public class FollowupA2ServiceImpl implements FollowupA2Service {
+public class FollowupA2ServiceImpl implements FollowupA2Service{
 	@Autowired
 	private FollowupA2Dao followupa2Dao;
 
 	@Transactional
 	public void add(FollowupA2 followupa2) {
 		followupa2Dao.add(followupa2);
-		
 	}
 
 	@Transactional
 	public void edit(FollowupA2 followupa2) {
 		followupa2Dao.edit(followupa2);
-		
 	}
 
 	@Transactional
 	public void delete(int a2) {
-		followupa2Dao.delete(a2);
-		
+		followupa2Dao.delete(a2);		
 	}
 
 	@Transactional
@@ -42,5 +39,4 @@ public class FollowupA2ServiceImpl implements FollowupA2Service {
 	public List getAllFollowupA2() {
 		return followupa2Dao.getAllFollowupA2();
 	}
-
 }

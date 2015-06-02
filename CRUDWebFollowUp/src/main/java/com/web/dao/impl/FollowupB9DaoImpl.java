@@ -39,6 +39,6 @@ public class FollowupB9DaoImpl implements FollowupB9Dao{
 
 	@Override
 	public List getAllFollowupB9() {
-		return session.getCurrentSession().createQuery("from B9").list();
+		return session.getCurrentSession().createQuery("from FollowupB9").list();
 	}
 }

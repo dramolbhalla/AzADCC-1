@@ -5,9 +5,10 @@
     
 <hibernate-configuration>
     <session-factory>        
-        <mapping class="com.web.model.FollowupA1" />
-        <mapping class="com.web.model.FollowupA2" />
-        <mapping class="com.web.model.FollowupA3" />
+         <mapping class="com.web.model.FollowupA1" />
+         <mapping class="com.web.model.FollowupA2" />
+         <mapping class="com.web.model.FollowupA3" />
+         <mapping class="com.web.model.FollowupA4" />
          <mapping class="com.web.model.FollowupB1" />
          <mapping class="com.web.model.FollowupB4" />
          <mapping class="com.web.model.FollowupB5" />
@@ -19,5 +20,23 @@
          <mapping class="com.web.model.FollowupC2" />
          <mapping class="com.web.model.FollowupD1" />
          <mapping class="com.web.model.FollowupD2" />
+         <mapping class="com.web.model.FollowupZ1" />
+         <mapping class="com.web.model.InitialA1" />
+         <mapping class="com.web.model.InitialA2" />
+         <mapping class="com.web.model.InitialA3" />
+         <mapping class="com.web.model.InitialA4" />
+         <mapping class="com.web.model.InitialA5" />
+         <mapping class="com.web.model.InitialB1" />
+         <mapping class="com.web.model.InitialB4" />
+         <mapping class="com.web.model.InitialB5" />
+         <mapping class="com.web.model.InitialB6" />
+         <mapping class="com.web.model.InitialB7" />
+         <mapping class="com.web.model.InitialB8" />
+         <mapping class="com.web.model.InitialB9" />
+         <mapping class="com.web.model.InitialC2" />
+         <mapping class="com.web.model.InitialD1" />
+         <mapping class="com.web.model.InitialD2" />
+         <mapping class="com.web.model.InitialZ1" />
+         <mapping class="com.web.model.Header" />
     </session-factory>         
 </hibernate-configuration>

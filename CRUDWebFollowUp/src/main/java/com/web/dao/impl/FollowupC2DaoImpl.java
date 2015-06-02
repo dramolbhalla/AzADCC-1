@@ -39,6 +39,6 @@ public class FollowupC2DaoImpl implements FollowupC2Dao{
 
 	@Override
 	public List getAllFollowupC2() {
-		return session.getCurrentSession().createQuery("from C2").list();
+		return session.getCurrentSession().createQuery("from FollowupC2").list();
 	}
 }

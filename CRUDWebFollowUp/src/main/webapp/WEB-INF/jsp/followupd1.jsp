@@ -12,7 +12,7 @@ body
 margin-left : 200px;
 margin-top : 50px;
 font-family : Arial Black;
-width: 70%;
+width: 1050px;
 min-width: 800px;
 }
 h4
@@ -160,8 +160,8 @@ Section 3: &nbsp;&nbsp;&nbsp;<b> Etiological status:</b> Presumed  Etiological d
 </p>
 <p class="even">
 3. Does the subject meet the criteria for dementia?<br>
-<form:input type="radio" name="demented" path="demented" required ="required" value="0" style="margin-left:20px;"/>0 No  &nbsp;&nbsp;&nbsp;&nbsp;<b>(SKIP TO QUESTION 5)</b>):<br />
-<form:input type="radio" name="demented" path="demented" required ="required" value="1" style="margin-left:20px;"/>1 Yes &nbsp;&nbsp;&nbsp;&nbsp;<b> <font size=2px> (CONTINUE TO QUESTION 4) </font></b><br />
+<form:input type="radio" name="demented" path="demented" value="0" style="margin-left:20px;"/>0 No  &nbsp;&nbsp;&nbsp;&nbsp;<b>(SKIP TO QUESTION 5)</b>):<br />
+<form:input type="radio" name="demented" path="demented" value="1" style="margin-left:20px;"/>1 Yes &nbsp;&nbsp;&nbsp;&nbsp;<b> <font size=2px> (CONTINUE TO QUESTION 4) </font></b><br />
 </p>
 
 

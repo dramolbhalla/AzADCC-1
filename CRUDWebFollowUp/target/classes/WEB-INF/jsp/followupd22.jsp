@@ -112,84 +112,84 @@ If any of the conditions below are present (even if successfully treated), pleas
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11b4.<form:input type="checkbox" name="artunkn"  path="artunkn" value="1" style="margin-left:0px;"/>1 Unknown<br />
    
    </td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="arthritis" required ="required" path="arth" value="0" />&nbsp;0</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="arthritis" required ="required" path="arth" value="1" />&nbsp;1</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="arthritis" required ="required" path="arth" value="8" />&nbsp;8</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="arth" required ="required" path="arth" value="0" />&nbsp;0</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="arth" required ="required" path="arth" value="1" />&nbsp;1</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="arth" required ="required" path="arth" value="8" />&nbsp;8</td>
   </tr>
   <tr>
    <td height="40" style="width:70%;">&nbsp;&nbsp;&nbsp;12. Incontinence-- urinary</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="urinary" required ="required" path="urineinc" value="0" />&nbsp;0</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="urinary" required ="required" path="urineinc" value="1" />&nbsp;1</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="urinary" required ="required" path="urineinc" value="8" />&nbsp;8</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="urineinc" required ="required" path="urineinc" value="0" />&nbsp;0</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="urineinc" required ="required" path="urineinc" value="1" />&nbsp;1</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="urineinc" required ="required" path="urineinc" value="8" />&nbsp;8</td>
   </tr>
   <tr>
    <td height="40" style="width:70%;">&nbsp;&nbsp;&nbsp;13. Incontinence-- bowel</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="bowel" required ="required" path="bowlic" value="0" />&nbsp;0</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="bowel" required ="required" path="bowlic" value="1" />&nbsp;1</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="bowel" required ="required" path="bowlic" value="8" />&nbsp;8</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="bowlic" required ="required" path="bowlic" value="0" />&nbsp;0</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="bowlic" required ="required" path="bowlic" value="1" />&nbsp;1</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="bowlic" required ="required" path="bowlic" value="8" />&nbsp;8</td>
   </tr>
   <tr>
    <td height="40" style="width:70%;">&nbsp;&nbsp;&nbsp;14. Sleep apnea</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="apnea" required ="required" path="sleepap" value="0" />&nbsp;0</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="apnea" required ="required" path="sleepap" value="1" />&nbsp;1</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="apnea" required ="required" path="sleepap" value="8" />&nbsp;8</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="sleepap" required ="required" path="sleepap" value="0" />&nbsp;0</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="sleepap" required ="required" path="sleepap" value="1" />&nbsp;1</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="sleepap" required ="required" path="sleepap" value="8" />&nbsp;8</td>
   </tr>
   <tr>
    <td height="40" style="width:70%;">&nbsp;&nbsp;&nbsp;15. REM sleep behavior disorder(RBD)</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="sleep" required ="required" path="remdis" value="0" />&nbsp;0</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="sleep" required ="required" path="remdis" value="1" />&nbsp;1</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="sleep" required ="required" path="remdis" value="8" />&nbsp;8</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="remdis" required ="required" path="remdis" value="0" />&nbsp;0</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="remdis" required ="required" path="remdis" value="1" />&nbsp;1</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="remdis" required ="required" path="remdis" value="8" />&nbsp;8</td>
   </tr>
   <tr>
    <td height="40" style="width:70%;">&nbsp;&nbsp;&nbsp;16. Hyposomnia/insomnia</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="insomnia" required ="required" path="hyposom" value="0" />&nbsp;0</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="insomnia" required ="required" path="hyposom" value="1" />&nbsp;1</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="insomnia" required ="required" path="hyposom" value="8" />&nbsp;8</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="hyposom" required ="required" path="hyposom" value="0" />&nbsp;0</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="hyposom" required ="required" path="hyposom" value="1" />&nbsp;1</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="hyposom" required ="required" path="hyposom" value="8" />&nbsp;8</td>
   </tr>
   <tr>
-   <td height="40" style="width:70%;">&nbsp;&nbsp;&nbsp;17. Other sleep disorder (SPECIFY) : <form:input type="text" name="month" required ="required" path="sleepoth" style="margin-left:0px; width:300px;"/></td>
+   <td height="40" style="width:70%;">&nbsp;&nbsp;&nbsp;17. Other sleep disorder (SPECIFY) : <form:input type="text" name="sleepoth" path="sleepoth" style="margin-left:0px; width:300px;"/></td>
    <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="sleeptx" required ="required" path="sleeptx" value="0" />&nbsp;0</td>
    <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="sleeptx" required ="required" path="sleeptx" value="1" />&nbsp;1</td>
    <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="sleeptx" required ="required" path="sleeptx" value="8" />&nbsp;8</td>
   </tr>
   <tr>
    <td height="40" style="width:70%;">&nbsp;&nbsp;&nbsp;18. Carotid procedure : angioplasty ,endarterectomy , or stent</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="angioplasty" required ="required" path="angiocp" value="0" />&nbsp;0</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="angioplasty" required ="required" path="angiocp" value="1" />&nbsp;1</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="angioplasty" required ="required" path="angiocp" value="8" />&nbsp;8</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="angiocp" required ="required" path="angiocp" value="0" />&nbsp;0</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="angiocp" required ="required" path="angiocp" value="1" />&nbsp;1</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="angiocp" required ="required" path="angiocp" value="8" />&nbsp;8</td>
   </tr>
   <tr>
   <td height="40" style="width:70%;">&nbsp;&nbsp;&nbsp;19. Percutaneous coronary intervention : angioplasty and/or stent</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="coronary"  required ="required" path="angiopci" value="0" />&nbsp;0</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="coronary"  required ="required" path="angiopci" value="1" />&nbsp;1</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="coronary"  required ="required" path="angiopci" value="8" />&nbsp;8</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="angiopci"  required ="required" path="angiopci" value="0" />&nbsp;0</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="angiopci"  required ="required" path="angiopci" value="1" />&nbsp;1</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="angiopci"  required ="required" path="angiopci" value="8" />&nbsp;8</td>
   </tr>
   <tr>
   <td height="40" style="width:70%;">&nbsp;&nbsp;&nbsp;20. Procedure : pacemaker and/or defibrillator</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="pacemaker" required ="required" path="pacemake" value="0" />&nbsp;0</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="pacemaker" required ="required" path="pacemake" value="1" />&nbsp;1</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="pacemaker" required ="required" path="pacemake" value="8" />&nbsp;8</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="pacemake" required ="required" path="pacemake" value="0" />&nbsp;0</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="pacemake" required ="required" path="pacemake" value="1" />&nbsp;1</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="pacemake" required ="required" path="pacemake" value="8" />&nbsp;8</td>
   </tr>
   <tr>
   <td height="40" style="width:70%;">&nbsp;&nbsp;&nbsp;21. Procedure: heart valve replacement or repair</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="repair" required ="required" path="hvalve" value="0" />&nbsp;0</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="repair" required ="required" path="hvalve" value="1" />&nbsp;1</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="repair" required ="required" path="hvalve" value="8" />&nbsp;8</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="hvalve" required ="required" path="hvalve" value="0" />&nbsp;0</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="hvalve" required ="required" path="hvalve" value="1" />&nbsp;1</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="hvalve" required ="required" path="hvalve" value="8" />&nbsp;8</td>
   </tr>
   <tr>
   <td height="40" style="width:70%;">&nbsp;&nbsp;&nbsp;22. Antibody-mediated encephalopathy <br>
-  <font size=2px >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 22a. Specify antibody :&nbsp;&nbsp;&nbsp;</font><form:input type="text" name="month" path="antiencx" style="margin-left:0px; width:400px;"/>
+  <font size=2px >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 22a. Specify antibody :&nbsp;&nbsp;&nbsp;</font><form:input type="text" name="antiencx" path="antiencx" style="margin-left:0px; width:400px;"/>
   </td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="Antibody" required ="required" path="antienc" value="0" />&nbsp;0</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="Antibody" required ="required" path="antienc" value="1" />&nbsp;1</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="Antibody" required ="required" path="antienc" value="8" />&nbsp;8</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="antienc" required ="required" path="antienc" value="0" />&nbsp;0</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="antienc" required ="required" path="antienc" value="1" />&nbsp;1</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="antienc" required ="required" path="antienc" value="8" />&nbsp;8</td>
   </tr>
   <tr>
   <td height="40" style="width:70%;">&nbsp;&nbsp;&nbsp;23. Other medical conditions or procedures not listed above <br>
-  <font size=2px >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (IF YES, SPECIFY):&nbsp;&nbsp;&nbsp;</font><form:input type="text" name="month" path="othcondx" style="margin-left:0px; width:400px;"/>
+  <font size=2px >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (IF YES, SPECIFY):&nbsp;&nbsp;&nbsp;</font><form:input type="text" name="othcondx" path="othcondx" style="margin-left:0px; width:400px;"/>
   </td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="Other" required ="required" path="othcond" value="0" />&nbsp;0</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="Other" required ="required" path="othcond" value="1" />&nbsp;1</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="othcond" required ="required" path="othcond" value="0" />&nbsp;0</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="othcond" required ="required" path="othcond" value="1" />&nbsp;1</td>
    <td style="width:10%;" bgcolor="Silver" ></td>
   </tr>
   </table>

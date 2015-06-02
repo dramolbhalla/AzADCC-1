@@ -141,6 +141,7 @@ public class FollowupC2Controller {
 	
 	{	  		
 		followupc2v.setCogstat(cogstat);
+		followupC2service.add(followupc2v);
 		return "C2"; //return to homepage
 	}
 	

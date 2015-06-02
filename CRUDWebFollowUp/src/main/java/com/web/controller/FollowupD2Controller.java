@@ -37,12 +37,12 @@ public class FollowupD2Controller {
 	}
 	@RequestMapping(value="/followupd2.do", method=RequestMethod.POST)
 	public String FollowUpVisitD2(Model model,@RequestParam("cancer") int cancer,
-			@RequestParam("cancsite") int cancsite,@RequestParam("Diabetes") int diabet , 
-			@RequestParam("myocardial") int myoinf,
-			@RequestParam("Congestive") int conghrt,
-			@RequestParam("atrial") int afibrill,@RequestParam("tension") int hypert,
-			@RequestParam("angina") int angina,@RequestParam("choles") int hypchol,
-			@RequestParam("B12") int vb12def,@RequestParam("thydis") int thydis) 
+			@RequestParam("cancsite") int cancsite,@RequestParam("diabet") int diabet , 
+			@RequestParam("myoinf") int myoinf,
+			@RequestParam("conghrt") int conghrt,
+			@RequestParam("afibrill") int afibrill,@RequestParam("hypert") int hypert,
+			@RequestParam("angina") int angina,@RequestParam("hypchol") int hypchol,
+			@RequestParam("vb12def") int vb12def,@RequestParam("thydis") int thydis) 
 	
 	{	  		
 		followupd2v.setCancer(cancer);
@@ -61,17 +61,18 @@ public class FollowupD2Controller {
 	}
 	
 	@RequestMapping(value="/followupd22.do", method=RequestMethod.POST)
-	public String FollowUpVisitD22(Model model,@RequestParam("arthritis") int arth,@RequestParam("artype") int artype,
+	public String FollowUpVisitD22(Model model,@RequestParam("arth") int arth,@RequestParam("artype") int artype,
 			@RequestParam("artypex") String artypex,
 			@RequestParam("artupex") int artupex,@RequestParam("artloex") int artloex,
 			@RequestParam("artspin") int artspin,@RequestParam("artunkn") int artunkn,
-			@RequestParam("phone") int urineinc,@RequestParam("bowel") int bowlic,
-			@RequestParam("apnea") int sleepap,@RequestParam("sleep") int remdis,
-			@RequestParam("insomnia") int hyposom,
+			@RequestParam("urineinc") int urineinc,@RequestParam("bowlic") int bowlic,
+			@RequestParam("sleepap") int sleepap,@RequestParam("remdis") int remdis,
+			@RequestParam("hyposom") int hyposom,
 			@RequestParam("sleepoth") int sleepoth,
 			@RequestParam("sleeptx") int sleeptx,
-			@RequestParam("angioplasty") int angiocp,
-			@RequestParam("coronary") int angiopci	
+			@RequestParam("angiocp") int angiocp,
+			@RequestParam("angiopci") int angiopci,@RequestParam("pacemake") int pacemake,@RequestParam("hvalve") int hvalve,
+			@RequestParam("antienc") int antienc,@RequestParam("antiencx") String antiencx,@RequestParam("othcond") int othcond,@RequestParam("othcondx") String othcondx
 			) 
 	{
 		
@@ -90,7 +91,13 @@ public class FollowupD2Controller {
 		followupd2v.setSleepoth(sleepoth);
 		followupd2v.setSleeptx(sleeptx);
 		followupd2v.setAngiocp(angiocp);
-		followupd2v.setAngiopci(angiopci);		
+		followupd2v.setAngiopci(angiopci);
+		followupd2v.setPacemake(pacemake);
+		followupd2v.setHvalve(hvalve);
+		followupd2v.setAntienc(antienc);
+		followupd2v.setAntiencx(antiencx);
+		followupd2v.setOthcond(othcond);
+		followupd2v.setOthcondx(othcondx);
 		followupD2service.add(followupd2v);
 		return "D2";
 	}

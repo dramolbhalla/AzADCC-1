@@ -12,7 +12,7 @@ body
 margin-left : 200px;
 margin-top : 50px;
 font-family : Arial Black;
-width: 70%;
+width: 1050px;
 min-width: 800px;
 }
 h4
@@ -176,7 +176,7 @@ Select one syndrome from 5a - 5e as being Present( all other will default to Abs
 <td ></td>
 <td> 5d3. Executive </td>
 <td > <form:input type="radio" name="mcin2ex" path="mcin2ex" value="0" style="margin-left:10px;" />0</td>
-<td > <form:input type="radio" name="mcin2ex" path="mcin2ex"value="1" style="margin-left:10px;" />1</td>
+<td > <form:input type="radio" name="mcin2ex" path="mcin2ex" value="1" style="margin-left:10px;" />1</td>
 </tr>
 <tr>
 <td></td>
@@ -272,13 +272,13 @@ Section 2 must be completed for all subjects.
 <tr>
 <td> &nbsp;&nbsp;&nbsp;6j.Dopamine transporter scan (DATscan) evidence for Lewy body disease</td>
 <td > <form:input type="radio" name="datscan" path="datscan" value="0" required ="required" style="margin-left:10px;" />0</td>
-<td > <form:input type="radio" name="datscan" path="datscan value="1" required ="required" style="margin-left:10px;" />1</td>
-<td > <form:input type="radio" name="datscan" path="datscan value="8" required ="required" style="margin-left:10px;" />8</td>
+<td > <form:input type="radio" name="datscan" path="datscan" value="1" required ="required" style="margin-left:10px;" />1</td>
+<td > <form:input type="radio" name="datscan" path="datscan" value="8" required ="required" style="margin-left:10px;" />8</td>
 </tr>
 <tr>
 <td> &nbsp;&nbsp;&nbsp;6k.Other (SPECIFY): <form:input type="text" name="othbiomx" path="othbiomx" required ="required" style="margin-left:0px; width:130px;"/></td>
-<td > <form:input type="radio" name="othbiom" path="othbiomx" value="0" required ="required" style="margin-left:10px;" />0</td>
-<td > <form:input type="radio" name="othbiom" path="othbiomx" value="1" required ="required" style="margin-left:10px;" />1</td>
+<td > <form:input type="radio" name="othbiom" path="othbiom" value="0" required ="required" style="margin-left:10px;" />0</td>
+<td > <form:input type="radio" name="othbiom" path="othbiom" value="1" required ="required" style="margin-left:10px;" />1</td>
 </tr>
 </table>
 <p class="footer">

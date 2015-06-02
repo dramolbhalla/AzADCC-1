@@ -1,6 +1,7 @@
+<%@page import="com.web.model.FollowupA3, com.web.model.Header"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-
+<%@ include file="/WEB-INF/jsp/includes.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -70,293 +71,275 @@ margin-left : 405px;
 </style>
 </head>
 <body>
-<font size =3px><b>
-<table>
+<%
+	Header header = (Header)session.getAttribute("header");
+	FollowupA3 followupa3 = (FollowupA3) session.getAttribute("followupa3");
+%>
+<form:form action="followupa35.do" method="POST" commandName="followupa35">
+<table class="smallheader">
 <tr>
-<td>Subject ID : &nbsp;<input type="text" name="ID" style="margin-left:0px;"/></td>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;Form Date : &nbsp; <input type="text" name="MM" style="margin-left:0px; width:20px;"/> &nbsp; / &nbsp; <input type="text" name="DD" style="margin-left:0px; width:20px;"/> &nbsp; / &nbsp;<input type="text" name="YY" style="margin-left:0px; width:70px;"/></td>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;Visit # : <input type="text" name="Visit" style="margin-left:0px; width:50px;"/></td>
+<td><label for="textvalue1" style="margin-left:10px;">Subject ID : </label> &nbsp; 
+<input type="text" name="ptid" <% if(header.getPtid()!=0){out.print("value=\""+header.getPtid()+"\"");} %> style="margin-left:0px; width:130px;"/></td>
+<td><label for="textvalue2" style="margin-left:180px;">Form date : </label>
+<input type="text" name="visitmo" <% if(header.getVisitmo()!=0){out.print("value=\""+header.getVisitmo()+"\"");} %> style="margin-left:0px; width:20px;"/>/
+<input type="text" name="visitday" <% if(header.getVisitday()!=0){out.print("value=\""+header.getVisitday()+"\"");} %> style="margin-left:0px; width:20px;"/>/
+<input type="text" name="visityr" <% if(header.getVisityr()!=0){out.print("value=\""+header.getVisityr()+"\"");} %> style="margin-left:0px; width:50px;"/>
+<td><label for="textvalue3" style="margin-left:250px;">Visit # : </label>
+<input type="text" name="visitnum" <% if(header.getVisitnum()!=0){out.print("value=\""+header.getVisitnum()+"\"");} %> style="margin-left:0px; width:30px;"/></td>
 </tr>
-</table></b></font>
+</table>
 <HR COLOR="CornflowerBlue" WIDTH="100%">
-<br>
-<br>
-<p>
- ** APPENDIX 1: PRIMARY DIAGNOSIS CODES  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;  *** APPENDIX 2 : METHOD OF EVALUATION
+<p class="odd">
+<label for="text11" style= "color :White;"> BIOLOGICAL CHILDREN</label>
 </p>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<table style="display: inline-block;float: left; ">
-		<tr>
-			<td bgcolor="#E6E6E6">040 &nbsp;&nbsp; Mild cognitive impairment (MCI) , not otherwise specified </td>
-		</tr>
-		<tr>
-			<td >041 &nbsp;&nbsp; MCI - single domain amnestic</td>
-		</tr>
-		<tr>
-			<td bgcolor="#E6E6E6">042 &nbsp;&nbsp; MCI - multiple domain with amnestic</td>
-		</tr>
-		<tr >
-			<td> 043 &nbsp;&nbsp; MCI - single domain nonamnestictd>
-		</tr>
-		<tr>
-			<td bgcolor="#E6E6E6">044 &nbsp;&nbsp; MCI - multiple domain with nonamnestic</td>
-		</tr>
-		<tr >
-			<td>045 &nbsp;&nbsp; Impaired, but not MCI</td>
-		</tr>
-		<tr>
-			<td bgcolor="#E6E6E6">050 &nbsp;&nbsp; Alzheimer's disease dementia</td>
-		</tr>
-		<tr >
-			<td>070 &nbsp;&nbsp; Dementia with Lewy Bodies</td>
-		</tr>
-		<tr>
-			<td bgcolor="#E6E6E6">080&nbsp;&nbsp;Vascular cognitive impairment or dementia</td>
-		</tr>
-		<tr >
-			<td>100 &nbsp;&nbsp;Impairment due to alcohol abuse</td>
-		</tr>
-		<tr>
-			<td bgcolor="#E6E6E6">110&nbsp;&nbsp;Dementia of undetermined etiology</td>
-		</tr>
-		<tr >
-			<td>120 &nbsp;&nbsp;Behavioral variant frontotemporal dementia</td>
-		</tr>
-		<tr>
-			<td bgcolor="#E6E6E6">130 &nbsp;&nbsp; primary progressive aphasia , semantic variant</td>
-		</tr>
-		<tr >
-			<td>131 &nbsp;&nbsp;primary progressive aphasia, nonfluent/agrammatic variant</td>
-		</tr>
-		<tr>
-			<td bgcolor="#E6E6E6">132&nbsp;&nbsp; primary progressive aphasia ,logopenic variant</td>
-		</tr>
-		<tr >
-			<td>133 &nbsp;&nbsp;primary progressive aphasia , not otherwise specified</td>
-		</tr>
-		<tr>
-			<td bgcolor="#E6E6E6">140&nbsp;&nbsp; Clinical progressive supranuclear palsy</td>
-		</tr>
-		<tr >
-			<td>150 &nbsp;&nbsp;Clinical corticobasal syndrome/corticobasal degeneration</td>
-		</tr><tr>
-			<td bgcolor="#E6E6E6">160&nbsp;&nbsp; Huntington's disease</td>
-		</tr>
-		<tr >
-			<td>170 &nbsp;&nbsp;Clinical prion disease</td>
-		</tr><tr>
-			<td bgcolor="#E6E6E6">180&nbsp;&nbsp; Cognitive dysfunction from medications</td>
-		</tr>
-		<tr >
-			<td>190 &nbsp;&nbsp;Cognitive dysfunction from medical illness</td>
-		</tr><tr>
-			<td bgcolor="#E6E6E6">200&nbsp;&nbsp; Depression</td>
-		</tr>
-		<tr >
-			<td>210 &nbsp;&nbsp;Other major psychiatric illness</td>
-		</tr><tr>
-			<td bgcolor="#E6E6E6">220&nbsp;&nbsp; Down syndrome</td>
-		</tr>
-		<tr >
-			<td>230 &nbsp;&nbsp;Pakinson's disease</td>
-		</tr><tr>
-			<td bgcolor="#E6E6E6">240&nbsp;&nbsp;Stroke </td>
-		</tr>
-		<tr >
-			<td>250 &nbsp;&nbsp;Hydrocephalus</td>
-		</tr><tr>
-			<td bgcolor="#E6E6E6">260&nbsp;&nbsp; Traumatic brain injury</td>
-		</tr>
-		<tr >
-			<td>270 &nbsp;&nbsp;CNS neoplasm</td>
-		</tr><tr>
-			<td bgcolor="#E6E6E6">280&nbsp;&nbsp; Other</td>
-		</tr>
-		<tr >
-			<td>310 &nbsp;&nbsp;Amyotrophic lateral sclerosis</td>
-		</tr><tr>
-			<td bgcolor="#E6E6E6">320 &nbsp;&nbsp; Multiple sclerosis </td>
-		</tr>
-		<tr >
-			<td>999 &nbsp;&nbsp;Specific diagnosis unknown (acceptable if method of evaluation <br>
-			is not by autopsy, examination , or dementia evaluation)</td>
-		</tr>
-		<tr>
-			<td > </td>
-		</tr>
-		
-		<tr>
-			<td > </td>
-		</tr>
-		
-		
-		<tr>
-			<td bgcolor="Silver">Neuropathology diagnosis from autopsy</td>
-		</tr>
-		<tr>
-			<td bgcolor="#E6E6E6">400 &nbsp;&nbsp; Alzheimer's disease neuropathology</td>
-		</tr>
-		<tr>
-			<td >410 &nbsp;&nbsp; Lewy body disease neuropathology</td>
-		</tr>
-		<tr>
-			<td bgcolor="#E6E6E6">420 &nbsp;&nbsp;Gross infarct(s) neuropathology</td>
-		</tr>
-		<tr >
-			<td> 421 &nbsp;&nbsp; Hemorrhage(s) neuropathology</td>
-		</tr>
-		<tr>
-			<td bgcolor="#E6E6E6">422 &nbsp;&nbsp; Other cerebrovascular disease neuropathology</td>
-		</tr>
-		<tr >
-			<td>430 &nbsp;&nbsp;ALS/MND</td>
-		</tr>
-		<tr>
-			<td bgcolor="#E6E6E6">431&nbsp;&nbsp;FTLD with Tau pathology -- Pick's disease</td>
-		</tr>
-		<tr >
-			<td>432 &nbsp;&nbsp;FTLD with Tau pathology -- CBD</td>
-		</tr>
-		<tr>
-			<td bgcolor="#E6E6E6">433&nbsp;&nbsp;FTLD with Tau pathology -- PSP</td>
-		</tr>
-		<tr >
-			<td>434 &nbsp;&nbsp;FTLD with Tau pathology -- argyrophyllic grains</td>
-		</tr>
-		<tr>
-			<td bgcolor="#E6E6E6">435&nbsp;&nbsp;FTLD with Tau pathology -- other</td>
-		</tr>
-		<tr >
-			<td>436 &nbsp;&nbsp;FTLD with TDP-43</td>
-		</tr>
-		<tr>
-			<td bgcolor="#E6E6E6">439 FTLD other (FTLD -FUS,FTLD -UPS,FTLD NOS)</td>
-		</tr>
-		<tr >
-			<td>440 &nbsp;&nbsp;Hippocampal sclerosis</td>
-		</tr>
-		<tr>
-			<td bgcolor="#E6E6E6">450 Prion disease neuropathology</td>
-		</tr>
-		<tr >
-			<td>490 &nbsp;&nbsp;Other neuropathologic diagnosis not listed above</td>
-		</tr>
-		<tr>
-		<td>&nbsp;&nbsp;</td>
-		</tr>
-		<tr>
-		<td>&nbsp;&nbsp;</td>
-		</table>
+<p class="even">
+7. How many biological children does the subject have? &nbsp;&nbsp;
+<input type="text" name="kids" required="required" path="kids" <% if(followupa3.getKids()!=0){out.print("value=\""+followupa3.getKids()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:0px; width:20px;"/> &nbsp;&nbsp; If subject has no biological children ,<b> END FORM HERE.</b><br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7a. Since the last UDS visit, is new information available concerning the status of the subject's biological children?<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" name="nwinfkid" required="required" path="nwinfkid" 
+	<%if(followupa3.getNwinfkid()==0){out.print(" checked ");}%> value="0" style="margin-left:0px;"/>0 No <font size=2px><b> (END FROM HERE)</b></font>
+<input type="radio" name="nwinfkid" required="required" path="nwinfkid" 
+	<%if(followupa3.getNwinfkid()==1){out.print(" checked ");}%> value="1"  style="margin-left:150px;"/>1 Yes<font size=2px> <b>(COMPLETE QUESTION 7aa-7ao,AS APPLICABLE) </b></font><br /><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For any biological child with a neurological or psychiatric problem,the entire row must be filled out.If the <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; clinician cannot determine the primary neurological problem/psychiatric condition after reviewing all available <br>  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; evidence, enter 9=Unknown in the <b> Primary neurological problem/psychiatric condition</b> column ,and then skip <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the subsequent question in the row.If the child has no neurological or psychiatric problem , enter 8=N/A - no <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; neurological problem or psychiatric condition in the <b> Primary neurological problem/psychiatric condition </b>column , <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and then skip the subsequent question in the row. <br>
+</p>
 
-		
-		<table style="display: inline-block; margin-left :20px ;">
-		
-		<tr>
-			<td>1. <b> Autopsy</b><br>
-			If the autopsy was performed at an outside institution ,<b>you must<br> 
-			have the report </b> to code as diagnosis by autopsy.
-			</td>
-			
-		</tr>
-		<tr>
-			<td>2. <b> Examination</b><br>
-			The subject must have been examined in person at your ADC/<br>
-			institution or by genetic studies staff associated with your ADC/<br>
-			institution to code as diagnosis by examination.Medical records <br>
-			may or may not have been used when assigning diagnosis.</td>
-		</tr>
-		<tr>
-			<td>3. <b> Medical record review from formal dementia evaluation</b><br>
-			Medical records should be from an examination that focused<br>
-			specifically on dementia; that was performed by a neurologist,<br>
-			geriatrician, or psychiatrist ; and that includes a neurologic<br>
-			examination, an imaging study, and cognitive testing (e.g.,MMSE,)<br>
-			Blessed, or more formal tests).A telephone interview may also be <br>
-			used to collect additional information.
-			</td>
-		</tr>
-		<tr>
-			<td><b> Review of general medical records AND co-participant and/or <br>
-			subject telephone interview<br>
-			General medical records</b> can be of various types,including those<br>
-			from a primary-care physician's office,hospitalization records,<br>
-			nursing home records, etc. They may include a neurologic exam<br>
-			and a cognitivete test such as the MMSE along with a medical <br>
-			history.<b> The telephone interview </b> with the subject and/or the co-<br>
-			participant should include a medical history to capture the nature<br>
-			and presentation of cognitive deficits,if present , and age of onset<br>
-			if symptomatic.if the subject is normal or is in the early stages<br>
-			of cognitive impairment,brief formal cognitive testing should be<br>
-			included in the interview.<br>		
-			</td>
-		</tr>
-		<tr>
-			<td>5.<b> Review of general medical records ONLY</b><br>
-			See definition No. 4 above.if general medical records are used<br>
-			to dagnose a subject as demented or not demented, they should <br>
-			include a medical history,neurologic exam, and a cognitive <br>
-			test such as an MMSE. In most cases,general medical records <br>
-			alone should not be used to assign a diagnosis of mild cognitive<br>
-			impairments ,or of any of the FTLD spectrum subtypes , or of <br>
-			parkinsonian disorder other than Parkinson's disease.
-			</td>
-		</tr>
-		<tr>
-			<td>6.<b> Subject and/or co-participant telephone interview</b><br>
-			See definition No.4 above.
-			</td>
-		</tr>
-		<tr>
-			<td>7.<b> Family report</b><br>
-			Family report should be coded when the co-participant for the<br>
-			family reports a subject as having been diagnosed with a particular<br>
-			disorder. In most cases, family report alone should not be used to <br>
-			assign a diagnosis of mild cognitive impairment, or of any of the<br>
-			FTLD spectrum subtypes, or of parkinsonian disorders other than <br>
-			 Parkinson's disease.
-			</td>
-		</tr>
-		<tr>
-		<td>&nbsp;&nbsp;</td>
-		</tr>
-		<tr>
-		<td>&nbsp;&nbsp;</td>
-		</tr>
-		<tr>
-		<td>&nbsp;&nbsp;</td>
-		</tr>
-		<tr>
-		<td>&nbsp;&nbsp;</td>
-		</tr>
-		<tr>
-		<td>&nbsp;&nbsp;</td>
-		</tr>
-		<tr>
-		<td>&nbsp;&nbsp;</td>
-		</tr>
-		<tr>
-		<td>&nbsp;&nbsp;</td>
-		</tr>
-		</table>
-		
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br><br>
-		<br>
-		
-		
+<br>
+<br>
 
+<table class="Biological" border=1>
+<tr bgcolor="#D8D8D8">
+<td width= "20%"></td>
+<td width= "20%"><font size=2px><b> Birth month/year (99/9999=Unknown)</b></font></td>
+<td width= "10%"><font size=2px><b> Age at death (888 =N/A,999 =Unknown)</b></font></td>
+<td width= "20%"><font size=2px><b> Primary neurological problem/psychiatric condition *</b></font></td>
+<td width= "10%"><font size=2px><b> Primary Dx**</b></font></td>
+<td width= "10%"><font size=2px><b> Method of evaluation***</b></font></td>
+<td width= "10%"><font size=2px><b> Age of onset (999=unknown)</b></font></td>
+</tr>
+
+<tr>
+<td width= "20%"> 7aa. Child 1 </td>
+<td width= "20%"><input type="text" path="kid1mob" name="kid1mob" <% if(followupa3.getKid1mob()!=0){out.print("value=\""+followupa3.getKid1mob()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:20px; width:20px ;"/>/
+				 <input type="text" path="kid1yob" name="kid1yob" <% if(followupa3.getKid1yob()!=0){out.print("value=\""+followupa3.getKid1yob()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:0px; width:60px ;"/></td>
+<td width= "10%"><input type="text" path="kid1agd" name="kid1agd" <% if(followupa3.getKid1agd()!=0){out.print("value=\""+followupa3.getKid1agd()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:20px; width:40px"/></td>
+<td width= "20%"><input type="text" path="kid1neu" name="kid1neu" <% if(followupa3.getKid1neu()!=0){out.print("value=\""+followupa3.getKid1neu()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:70px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid1pdx" name="kid1pdx" <% if(followupa3.getKid1pdx()!=0){out.print("value=\""+followupa3.getKid1pdx()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid1moe" name="kid1moe" <% if(followupa3.getKid1moe()!=0){out.print("value=\""+followupa3.getKid1moe()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid1ago" name="kid1ago" <% if(followupa3.getKid1ago()!=0){out.print("value=\""+followupa3.getKid1ago()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+</tr>
+
+<tr>
+<td width= "20%"> 7a. Child  </td>
+<td width= "20%"><input type="text" path="kid2mob" name="kid2mob" <% if(followupa3.getKid2mob()!=0){out.print("value=\""+followupa3.getKid2mob()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:20px; width:20px ;"/>/
+				 <input type="text" path="kid2yob" name="kid2yob" <% if(followupa3.getKid2yob()!=0){out.print("value=\""+followupa3.getKid2yob()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:0px; width:60px ;"/></td>
+<td width= "10%"><input type="text" path="kid2agd" name="kid2agd" <% if(followupa3.getKid2agd()!=0){out.print("value=\""+followupa3.getKid2agd()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:20px; width:40px"/></td>
+<td width= "20%"><input type="text" path="kid2neu" name="kid2neu" <% if(followupa3.getKid2neu()!=0){out.print("value=\""+followupa3.getKid2neu()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:70px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid2pdx" name="kid2pdx" <% if(followupa3.getKid2pdx()!=0){out.print("value=\""+followupa3.getKid2pdx()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid2moe" name="kid2moe" <% if(followupa3.getKid2moe()!=0){out.print("value=\""+followupa3.getKid2moe()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid2ago" name="kid2ago" <% if(followupa3.getKid2ago()!=0){out.print("value=\""+followupa3.getKid2ago()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+</tr>
+
+<tr>
+<td width= "20%"> 7a. Child  </td>
+<td width= "20%"><input type="text" path="kid3mob" name="kid3mob" <% if(followupa3.getKid3mob()!=0){out.print("value=\""+followupa3.getKid3mob()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:20px; width:20px ;"/>/
+				 <input type="text" path="kid3yob" name="kid3yob" <% if(followupa3.getKid3yob()!=0){out.print("value=\""+followupa3.getKid3yob()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:0px; width:60px ;"/></td>
+<td width= "10%"><input type="text" path="kid3agd" name="kid3agd" <% if(followupa3.getKid3agd()!=0){out.print("value=\""+followupa3.getKid3agd()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:20px; width:40px"/></td>
+<td width= "20%"><input type="text" path="kid3neu" name="kid3neu" <% if(followupa3.getKid3neu()!=0){out.print("value=\""+followupa3.getKid3neu()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:70px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid3pdx" name="kid3pdx" <% if(followupa3.getKid3pdx()!=0){out.print("value=\""+followupa3.getKid3pdx()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid3moe" name="kid3moe" <% if(followupa3.getKid3moe()!=0){out.print("value=\""+followupa3.getKid3moe()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid3ago" name="kid3ago" <% if(followupa3.getKid3ago()!=0){out.print("value=\""+followupa3.getKid3ago()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+</tr>
+
+<tr>
+<td width= "20%"> 7a. Child  </td>
+<td width= "20%"><input type="text" path="kid4mob" name="kid4mob" <% if(followupa3.getKid4mob()!=0){out.print("value=\""+followupa3.getKid4mob()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:20px; width:20px ;"/>/
+				 <input type="text" path="kid4yob" name="kid4yob" <% if(followupa3.getKid4yob()!=0){out.print("value=\""+followupa3.getKid4yob()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:0px; width:60px ;"/></td>
+<td width= "10%"><input type="text" path="kid4agd" name="kid4agd" <% if(followupa3.getKid4agd()!=0){out.print("value=\""+followupa3.getKid4agd()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:20px; width:40px"/></td>
+<td width= "20%"><input type="text" path="kid4neu" name="kid4neu" <% if(followupa3.getKid4neu()!=0){out.print("value=\""+followupa3.getKid4neu()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:70px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid4pdx" name="kid4pdx" <% if(followupa3.getKid4pdx()!=0){out.print("value=\""+followupa3.getKid4pdx()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid4moe" name="kid4moe" <% if(followupa3.getKid4moe()!=0){out.print("value=\""+followupa3.getKid4moe()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid4ago" name="kid4ago" <% if(followupa3.getKid4ago()!=0){out.print("value=\""+followupa3.getKid4ago()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+</tr>
+
+<tr>
+<td width= "20%"> 7a. Child  </td>
+<td width= "20%"><input type="text" path="kid5mob" name="kid5mob" <% if(followupa3.getKid5mob()!=0){out.print("value=\""+followupa3.getKid5mob()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:20px; width:20px ;"/>/
+				 <input type="text" path="kid5yob" name="kid5yob" <% if(followupa3.getKid5yob()!=0){out.print("value=\""+followupa3.getKid5yob()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:0px; width:60px ;"/></td>
+<td width= "10%"><input type="text" path="kid5agd" name="kid5agd" <% if(followupa3.getKid5agd()!=0){out.print("value=\""+followupa3.getKid5agd()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:20px; width:40px"/></td>
+<td width= "20%"><input type="text" path="kid5neu" name="kid5neu" <% if(followupa3.getKid5neu()!=0){out.print("value=\""+followupa3.getKid5neu()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:70px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid5pdx" name="kid5pdx" <% if(followupa3.getKid5pdx()!=0){out.print("value=\""+followupa3.getKid5pdx()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid5moe" name="kid5moe" <% if(followupa3.getKid5moe()!=0){out.print("value=\""+followupa3.getKid5moe()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid5ago" name="kid5ago" <% if(followupa3.getKid5ago()!=0){out.print("value=\""+followupa3.getKid5ago()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+</tr>
+
+<tr>
+<td width= "20%"> 7a. Child  </td>
+<td width= "20%"><input type="text" path="kid6mob" name="kid6mob" <% if(followupa3.getKid6mob()!=0){out.print("value=\""+followupa3.getKid6mob()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:20px; width:20px ;"/>/
+				 <input type="text" path="kid6yob" name="kid6yob" <% if(followupa3.getKid6yob()!=0){out.print("value=\""+followupa3.getKid6yob()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:0px; width:60px ;"/></td>
+<td width= "10%"><input type="text" path="kid6agd" name="kid6agd" <% if(followupa3.getKid6agd()!=0){out.print("value=\""+followupa3.getKid6agd()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:20px; width:40px"/></td>
+<td width= "20%"><input type="text" path="kid6neu" name="kid6neu" <% if(followupa3.getKid6neu()!=0){out.print("value=\""+followupa3.getKid6neu()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:70px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid6pdx" name="kid6pdx" <% if(followupa3.getKid6pdx()!=0){out.print("value=\""+followupa3.getKid6pdx()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid6moe" name="kid6moe" <% if(followupa3.getKid6moe()!=0){out.print("value=\""+followupa3.getKid6moe()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid6ago" name="kid6ago" <% if(followupa3.getKid6ago()!=0){out.print("value=\""+followupa3.getKid6ago()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+</tr>
+
+<tr>
+<td width= "20%"> 7a. Child  </td>
+<td width= "20%"><input type="text" path="kid7mob" name="kid7mob" <% if(followupa3.getKid7mob()!=0){out.print("value=\""+followupa3.getKid7mob()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:20px; width:20px ;"/>/
+				 <input type="text" path="kid7yob" name="kid7yob" <% if(followupa3.getKid7yob()!=0){out.print("value=\""+followupa3.getKid7yob()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:0px; width:60px ;"/></td>
+<td width= "10%"><input type="text" path="kid7agd" name="kid7agd" <% if(followupa3.getKid7agd()!=0){out.print("value=\""+followupa3.getKid7agd()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:20px; width:40px"/></td>
+<td width= "20%"><input type="text" path="kid7neu" name="kid7neu" <% if(followupa3.getKid7neu()!=0){out.print("value=\""+followupa3.getKid7neu()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:70px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid7pdx" name="kid7pdx" <% if(followupa3.getKid7pdx()!=0){out.print("value=\""+followupa3.getKid7pdx()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid7moe" name="kid7moe" <% if(followupa3.getKid7moe()!=0){out.print("value=\""+followupa3.getKid7moe()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid7ago" name="kid7ago" <% if(followupa3.getKid7ago()!=0){out.print("value=\""+followupa3.getKid7ago()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+</tr>
+
+<tr>
+<td width= "20%"> 7a. Child  </td>
+<td width= "20%"><input type="text" path="kid8mob" name="kid8mob" <% if(followupa3.getKid8mob()!=0){out.print("value=\""+followupa3.getKid8mob()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:20px; width:20px ;"/>/
+				 <input type="text" path="kid8yob" name="kid8yob" <% if(followupa3.getKid8yob()!=0){out.print("value=\""+followupa3.getKid8yob()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:0px; width:60px ;"/></td>
+<td width= "10%"><input type="text" path="kid8agd" name="kid8agd" <% if(followupa3.getKid8agd()!=0){out.print("value=\""+followupa3.getKid8agd()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:20px; width:40px"/></td>
+<td width= "20%"><input type="text" path="kid8neu" name="kid8neu" <% if(followupa3.getKid8neu()!=0){out.print("value=\""+followupa3.getKid8neu()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:70px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid8pdx" name="kid8pdx" <% if(followupa3.getKid8pdx()!=0){out.print("value=\""+followupa3.getKid8pdx()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid8moe" name="kid8moe" <% if(followupa3.getKid8moe()!=0){out.print("value=\""+followupa3.getKid8moe()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid8ago" name="kid8ago" <% if(followupa3.getKid8ago()!=0){out.print("value=\""+followupa3.getKid8ago()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+</tr>
+
+<tr>
+<td width= "20%"> 7a. Child  </td>
+<td width= "20%"><input type="text" path="kid9mob" name="kid9mob" <% if(followupa3.getKid9mob()!=0){out.print("value=\""+followupa3.getKid9mob()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:20px; width:20px ;"/>/
+				 <input type="text" path="kid9yob" name="kid9yob" <% if(followupa3.getKid9yob()!=0){out.print("value=\""+followupa3.getKid9yob()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:0px; width:60px ;"/></td>
+<td width= "10%"><input type="text" path="kid9agd" name="kid9agd" <% if(followupa3.getKid9agd()!=0){out.print("value=\""+followupa3.getKid9agd()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:20px; width:40px"/></td>
+<td width= "20%"><input type="text" path="kid9neu" name="kid9neu" <% if(followupa3.getKid9neu()!=0){out.print("value=\""+followupa3.getKid9neu()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:70px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid9pdx" name="kid9pdx" <% if(followupa3.getKid9pdx()!=0){out.print("value=\""+followupa3.getKid9pdx()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid9moe" name="kid9moe" <% if(followupa3.getKid9moe()!=0){out.print("value=\""+followupa3.getKid9moe()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid9ago" name="kid9ago" <% if(followupa3.getKid9ago()!=0){out.print("value=\""+followupa3.getKid9ago()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+</tr>
+
+<tr>
+<td width= "20%"> 7a. Child  </td>
+<td width= "20%"><input type="text" path="kid10mob" name="kid10mob" <% if(followupa3.getKid10mob()!=0){out.print("value=\""+followupa3.getKid10mob()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:20px; width:20px ;"/>/
+				 <input type="text" path="kid10yob" name="kid10yob" <% if(followupa3.getKid10yob()!=0){out.print("value=\""+followupa3.getKid10yob()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:0px; width:60px ;"/></td>
+<td width= "10%"><input type="text" path="kid10agd" name="kid10agd" <% if(followupa3.getKid10agd()!=0){out.print("value=\""+followupa3.getKid10agd()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:20px; width:40px"/></td>
+<td width= "20%"><input type="text" path="kid10neu" name="kid10neu" <% if(followupa3.getKid10neu()!=0){out.print("value=\""+followupa3.getKid10neu()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:70px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid10pdx" name="kid10pdx" <% if(followupa3.getKid10pdx()!=0){out.print("value=\""+followupa3.getKid10pdx()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid10moe" name="kid10moe" <% if(followupa3.getKid10moe()!=0){out.print("value=\""+followupa3.getKid10moe()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid10ago" name="kid10ago" <% if(followupa3.getKid10ago()!=0){out.print("value=\""+followupa3.getKid10ago()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+</tr>
+
+<tr>
+<td width= "20%"> 7a. Child  </td>
+<td width= "20%"><input type="text" path="kid11mob" name="kid11mob" <% if(followupa3.getKid11mob()!=0){out.print("value=\""+followupa3.getKid11mob()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:20px; width:20px ;"/>/
+				 <input type="text" path="kid11yob" name="kid11yob" <% if(followupa3.getKid11yob()!=0){out.print("value=\""+followupa3.getKid11yob()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:0px; width:60px ;"/></td>
+<td width= "10%"><input type="text" path="kid11agd" name="kid11agd" <% if(followupa3.getKid11agd()!=0){out.print("value=\""+followupa3.getKid11agd()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:20px; width:40px"/></td>
+<td width= "20%"><input type="text" path="kid11neu" name="kid11neu" <% if(followupa3.getKid11neu()!=0){out.print("value=\""+followupa3.getKid11neu()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:70px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid11pdx" name="kid11pdx" <% if(followupa3.getKid11pdx()!=0){out.print("value=\""+followupa3.getKid11pdx()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid11moe" name="kid11moe" <% if(followupa3.getKid11moe()!=0){out.print("value=\""+followupa3.getKid11moe()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid11ago" name="kid11ago" <% if(followupa3.getKid11ago()!=0){out.print("value=\""+followupa3.getKid11ago()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+</tr>
+
+<tr>
+<td width= "20%"> 7a. Child  </td>
+<td width= "20%"><input type="text" path="kid12mob" name="kid12mob" <% if(followupa3.getKid12mob()!=0){out.print("value=\""+followupa3.getKid12mob()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:20px; width:20px ;"/>/
+				 <input type="text" path="kid12yob" name="kid12yob" <% if(followupa3.getKid12yob()!=0){out.print("value=\""+followupa3.getKid12yob()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:0px; width:60px ;"/></td>
+<td width= "10%"><input type="text" path="kid12agd" name="kid12agd" <% if(followupa3.getKid12agd()!=0){out.print("value=\""+followupa3.getKid12agd()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:20px; width:40px"/></td>
+<td width= "20%"><input type="text" path="kid12neu" name="kid12neu" <% if(followupa3.getKid12neu()!=0){out.print("value=\""+followupa3.getKid12neu()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:70px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid12pdx" name="kid12pdx" <% if(followupa3.getKid12pdx()!=0){out.print("value=\""+followupa3.getKid12pdx()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid12moe" name="kid12moe" <% if(followupa3.getKid12moe()!=0){out.print("value=\""+followupa3.getKid12moe()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid12ago" name="kid12ago" <% if(followupa3.getKid12ago()!=0){out.print("value=\""+followupa3.getKid12ago()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+</tr>
+
+<tr>
+<td width= "20%"> 7a. Child  </td>
+<td width= "20%"><input type="text" path="kid13mob" name="kid13mob" <% if(followupa3.getKid13mob()!=0){out.print("value=\""+followupa3.getKid13mob()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:20px; width:20px ;"/>/
+				 <input type="text" path="kid13yob" name="kid13yob" <% if(followupa3.getKid13yob()!=0){out.print("value=\""+followupa3.getKid13yob()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:0px; width:60px ;"/></td>
+<td width= "10%"><input type="text" path="kid13agd" name="kid13agd" <% if(followupa3.getKid13agd()!=0){out.print("value=\""+followupa3.getKid13agd()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:20px; width:40px"/></td>
+<td width= "20%"><input type="text" path="kid13neu" name="kid13neu" <% if(followupa3.getKid13neu()!=0){out.print("value=\""+followupa3.getKid13neu()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:70px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid13pdx" name="kid13pdx" <% if(followupa3.getKid13pdx()!=0){out.print("value=\""+followupa3.getKid13pdx()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid13moe" name="kid13moe" <% if(followupa3.getKid13moe()!=0){out.print("value=\""+followupa3.getKid13moe()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid13ago" name="kid13ago" <% if(followupa3.getKid13ago()!=0){out.print("value=\""+followupa3.getKid13ago()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+</tr>
+
+<tr>
+<td width= "20%"> 7a. Child  </td>
+<td width= "20%"><input type="text" path="kid14mob" name="kid14mob" <% if(followupa3.getKid14mob()!=0){out.print("value=\""+followupa3.getKid14mob()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:20px; width:20px ;"/>/
+				 <input type="text" path="kid14yob" name="kid14yob" <% if(followupa3.getKid14yob()!=0){out.print("value=\""+followupa3.getKid14yob()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:0px; width:60px ;"/></td>
+<td width= "10%"><input type="text" path="kid14agd" name="kid14agd" <% if(followupa3.getKid14agd()!=0){out.print("value=\""+followupa3.getKid14agd()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:20px; width:40px"/></td>
+<td width= "20%"><input type="text" path="kid14neu" name="kid14neu" <% if(followupa3.getKid14neu()!=0){out.print("value=\""+followupa3.getKid14neu()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:70px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid14pdx" name="kid14pdx" <% if(followupa3.getKid14pdx()!=0){out.print("value=\""+followupa3.getKid14pdx()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid14moe" name="kid14moe" <% if(followupa3.getKid14moe()!=0){out.print("value=\""+followupa3.getKid14moe()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid14ago" name="kid14ago" <% if(followupa3.getKid14ago()!=0){out.print("value=\""+followupa3.getKid14ago()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+</tr>
+
+<tr>
+<td width= "20%"> 7a. Child  </td>
+<td width= "20%"><input type="text" path="kid15mob" name="kid15mob" <% if(followupa3.getKid15mob()!=0){out.print("value=\""+followupa3.getKid15mob()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:20px; width:20px ;"/>/
+				 <input type="text" path="kid15yob" name="kid15yob" <% if(followupa3.getKid15yob()!=0){out.print("value=\""+followupa3.getKid15yob()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:0px; width:60px ;"/></td>
+<td width= "10%"><input type="text" path="kid15agd" name="kid15agd" <% if(followupa3.getKid15agd()!=0){out.print("value=\""+followupa3.getKid15agd()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:20px; width:40px"/></td>
+<td width= "20%"><input type="text" path="kid15neu" name="kid15neu" <% if(followupa3.getKid15neu()!=0){out.print("value=\""+followupa3.getKid15neu()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:70px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid15pdx" name="kid15pdx" <% if(followupa3.getKid15pdx()!=0){out.print("value=\""+followupa3.getKid15pdx()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid15moe" name="kid15moe" <% if(followupa3.getKid15moe()!=0){out.print("value=\""+followupa3.getKid15moe()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+<td width= "10%"><input type="text" path="kid15ago" name="kid15ago" <% if(followupa3.getKid15ago()!=0){out.print("value=\""+followupa3.getKid15ago()+"\"");}else{out.print("value=\"0\"");} %> style="margin-left:30px;width:20px"/></td>
+</tr>
+
+</table>
+
+<br>
+<br>
+<table class ="A4">
+<tr><td> <b>*CODES for neurological problems and<br>
+psychiatric conditions</b></td></tr>
+<tr><td>1 Cognitive impairment/behavior change </td></tr>
+<tr><td>2 Parkinsonism </td></tr>
+<tr><td>3 ALS </td></tr>
+<tr><td>4 Other neurologic condition such as multiple<br> sclerosis or stroke </td></tr>
+<tr><td>5 Psychiatric condition such as schizophrenia, <br> bipolar disorder,alcoholism,or depression </td></tr>
+<tr><td>8 N/A--no neurological problem or psychiatric <br>condition </td></tr>
+<tr><td>9 Unknown </td></tr>
+</table>
+
+
+<table class="A4" style= "margin-left : 100px;">
+<tr><td> <b>**CODES for primary diagnosis</b></td></tr>
+<tr><td>See Appendix 1 on page 5 of this form </td></tr>
+</table>
+
+
+ <table class ="A4" style="margin-left : 130px;">
+<tr><td> <b>***CODES for method of evaluation</b></td></tr>
+<tr><td>1 Autopsy </td></tr>
+<tr><td>2 Examination </td></tr>
+<tr><td>3 medical record review from formal <br>dementia evaluation </td></tr>
+<tr><td>4 Review of general medical records AND <br> co-participant and/or subject telephone <br> interview </td></tr>
+<tr><td>5 Review of general medical records only </td></tr>
+<tr><td>6 Subject and/or co-participant telephone <br>interview </td></tr>
+<tr><td>9 Family report </td></tr>
+</table>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br><br>
+<br>
+<br>
+<br>
+		
 <p class="footer">
 <font size = 3px color="Grey">National Alzheimer's Coordinating Center &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;(206) 543 -8637 &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;fax :(206) 616-5927 &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; naccmail@uw.edu  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;  www.alz.washington.edu<br></font>
 <b>UDS Version 3.0 ,March 2015</b><font color = "Red">&nbsp;&nbsp;&nbsp;Form A3 : Subject Family History </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Page 5 of 5  
 </b></p>
 <input type = "submit" name="action" value="Submit" style="margin-left:400px;" /> 
+</form:form>
 
 </body>
 </html>

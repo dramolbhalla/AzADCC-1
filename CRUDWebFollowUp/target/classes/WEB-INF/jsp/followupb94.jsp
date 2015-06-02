@@ -187,7 +187,7 @@ Follow-up Visit packet , Form B9. Check only <u> one</u> box per question.</i>
 <font color ="Black"><b>UDS (V3.0 ,March 2015) Telephone Follow-up Visit</b></font> <font color = "Red">Form B9 : Clinical Judgment of Symptoms </font>  
 </p>
 <p class="footer1"> <b>Page 4 of 5</b> </p>
-<input type = "submit" name="action" value="Move to Page 4" style="margin-left:400px;" /> 
+<input type = "submit" name="action" value="Move to Page 5" style="margin-left:400px;" /> 
 </form:form>
 </body>
 </html>

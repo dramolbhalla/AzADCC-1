@@ -170,8 +170,8 @@ For example , does s/he show signs of nervousness (e.g., frequent sighing,anxiou
 </tr>
 <tr>
 <td> &nbsp;&nbsp;&nbsp;9j. <b>Other  </b> (SPECIFY) <form:input type="text"  name="beothrx" path="beothrx" style="margin-left:0px; width:150px;"/> </td>
-<td > <form:input type="radio" name="beothr" path="beothrx" value="0" style="margin-left:10px;" />0</td>
-<td > <form:input type="radio" name="beothr" path="beothrx" value="1" style="margin-left:10px;" />1</td>
+<td > <form:input type="radio" name="beothr" path="beothr" value="0" style="margin-left:10px;" />0</td>
+<td > <form:input type="radio" name="beothr" path="beothr" value="1" style="margin-left:10px;" />1</td>
 <td > </td>
 </tr>
 
@@ -273,7 +273,7 @@ National Alzheimer's Coordinating Center &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
 <font color ="Black"><b>UDS (V3.0 ,March 2015) Telephone Follow-up Visit</b></font> <font color = "Red">Form B9 : Clinical Judgment of Symptoms </font>
 </p>
 <p class="footer1"> <b>Page 3 of 5</b> </p>
-<input type = "submit" name="action" value="Move to Page 3" style="margin-left:400px;" /> 
+<input type = "submit" name="action" value="Move to Page 4" style="margin-left:400px;" /> 
 </form:form>
 </body>
 </html>

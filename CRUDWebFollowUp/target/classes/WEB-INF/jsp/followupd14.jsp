@@ -12,7 +12,7 @@ body
 margin-left : 200px;
 margin-top : 50px;
 font-family : Arial Black;
-width: 70%;
+width: 1050px;
 min-width: 800px;
 }
 h4
@@ -100,7 +100,7 @@ margin-left : 405px;
 </style>
 </head>
 <body>
-<form:form action="followupd14.do" method="POST" commandName="followupd14">
+
 <table class="smallheader">
 <tr>
 <td><label for="textvalue1" style="margin-left:10px;">Subject ID : </label> &nbsp; <input type="text" name="SubID" style="margin-left:0px; width:130px;"/></td>
@@ -108,7 +108,9 @@ margin-left : 405px;
 <td><label for="textvalue3" style="margin-left:250px;">Visit # : </label><input type="text" name="Visit" style="margin-left:0px; width:30px;"/></td>
 </tr>
 </table>
+
 <HR COLOR="CornflowerBlue" WIDTH="100%">
+<form:form action="followupd14.do" method="POST" commandName="followupd14">
 <table class="CDR" border=1>
 <tr>
 <td width= "70%" >Imaging findings</td>
@@ -222,7 +224,7 @@ margin-left : 405px;
 <td>14e . If FTLD (Question 14a-14d) is Present,specify FTLD subtype:<br>
 <form:input type="radio" name="ftldsubt" path="ftldsubt" value="1" style="margin-left:10px;" />1 Tauopathy <br>
 <form:input type="radio" name="ftldsubt" path="ftldsubt" value="2" style="margin-left:10px;" />2 TDP - 43 proteinopathy<br>
-<form:input type="radio" name="ftldsubt" path="ftldsubt" value="3" style="margin-left:10px;" />3 Other (SPECIFY): <form:input type="text" name="ftldsubx" path="ftldsubx" size = "15" maxlength ="15"style="margin-left:0px;"/>
+<form:input type="radio" name="ftldsubt" path="ftldsubt" value="3" style="margin-left:10px;" />3 Other (SPECIFY): <form:input type="text" name="ftldsubx" path="ftldsubx" size = "15" maxlength ="15" style="margin-left:0px;"/>
 <br><form:input type="radio" name="ftldsubt" path="ftldsubt" value="9" style="margin-left:10px;" />9 Unknown<br>
  </td>
 <td></td>
@@ -264,6 +266,12 @@ margin-left : 405px;
 			<td>14c1<form:input type="radio" name="ftldmoif" path="ftldmoif" value="1" style="margin-left:10px;" />1</td>
 			<td><form:input type="radio" name="ftldmoif" path="ftldmoif" value="2" style="margin-left:10px;" />2</td>
 			<td><form:input type="radio" name="ftldmoif" path="ftldmoif" value="3" style="margin-left:10px;" />3</td>	
+		</tr>
+		<tr >
+			<td>14d1<form:input type="radio" name="ftldnoif" path="ftldnoif" value="1" style="margin-left:10px;" />1<br><br><br><br><br><br><br></td>
+			<td><form:input type="radio" name="ftldnoif" path="ftldnoif" value="2" style="margin-left:10px;" />2<br><br><br><br><br><br><br></td>
+			<td><form:input type="radio" name="ftldnoif" path="ftldnoif" value="3" style="margin-left:10px;" />3<br><br><br><br><br><br><br> </td>	
+			
 		</tr>
 		<tr >
 			<td>14d1<form:input type="radio" name="ftldnoif" path="ftldnoif" value="1" style="margin-left:10px;" />1<br><br><br><br><br><br><br></td>

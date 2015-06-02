@@ -82,6 +82,56 @@ margin-left : 405px;
     right: 0px;
 }
 </style>
+<script type="text/javascript">
+function disable(a)
+{
+	var rates = document.getElementsByName(a);
+	var result;
+	var count =0;
+	
+	for(var i = 0; i < rates.length; i++){
+		 if(rates[i].checked){
+		    	result = rates[i].value;
+		    }
+		 else
+			 {
+			 count++;
+			 }
+	}
+	if(count ==3)
+		return count;
+}
+function validate()
+{ 
+	
+	var nogds = document.getElementsByName('nogds');
+	if(!nogds[0].checked){
+		
+		var satis = disable("satis");
+		var dropact = disable("dropact");
+		var empty = disable("empty");
+		var bored = disable("bored");
+		var spirits = disable("spirits");
+		var afraid = disable("afraid");
+		var happy = disable("happy");
+		var helpless = disable("helpless");
+		var stayhome = disable("stayhome");
+		var memprob = disable("memprob");
+		var wondrful = disable("wondrful");
+		var wrthless = disable("wrthless");
+		var energy = disable("energy");
+		var hopeless = disable("hopeless");
+		var better = disable("better");   
+	    }
+	if(satis ==3 || dropact ==3 ||empty ==3 ||bored ==3 ||spirits ==3 ||afraid ==3 ||happy ==3 ||helpless ==3 ||stayhome ==3 ||memprob ==3 ||wondrful ==3 ||wrthless ==3 ||
+			energy ==3 ||hopeless ==3 ||better ==3)
+		{
+		window.alert("Please select an option for all questions");
+		return false;
+		}
+	
+}
+</script>
 </head>
 <body>
 <div id="content">
@@ -109,7 +159,7 @@ based on subject response. For additional clarification and examples, see UDS Co
 <u>one </u> answer per question.</i></font>
 <br><br>
 <br>
-<form:form action="followupb6.do" method="POST" commandName="followupb6">
+<form:form action="followupb6.do" method="POST" commandName="followupb6" onsubmit="return validate();">
 <p class="odd" >
 <form:input type="checkbox" name="complete" value="incomplete" path="nogds" style="margin-left:0px; 	text-align: justify;
     text-justify: inter-word;"/>&nbsp;&nbsp;Check this box and enter "88" below for the Total GDS Score <b>if and only if </b> the subject: 1) does not

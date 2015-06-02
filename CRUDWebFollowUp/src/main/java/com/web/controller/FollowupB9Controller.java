@@ -29,16 +29,20 @@ public class FollowupB9Controller {
 			return "followupb92";
 	}
 	@RequestMapping(value="/followupb9.do", method=RequestMethod.POST)
-	public String FollowUpVisitB9(Model model,@RequestParam("decsub") int decsub,@RequestParam("decin") int decin,
-			@RequestParam("decclcog") int decclcog,@RequestParam("cogmem") int cogmem , 
+	public String FollowUpVisitB9(Model model,
+			@RequestParam("decsub") int decsub,
+			@RequestParam("decin") int decin,
+			@RequestParam("decclcog") int decclcog,
+			@RequestParam("cogmem") int cogmem , 
 			@RequestParam("cogori") int cogori,
 			@RequestParam("coglang") int coglang,
-			@RequestParam("cogjudg") int cogjudg,@RequestParam("cogvis") int cogvis,
+			@RequestParam("cogjudg") int cogjudg,
+			@RequestParam("cogvis") int cogvis,
 			@RequestParam("cogattn") int cogattn,
 			@RequestParam("cogflago") int cogflago,
 			@RequestParam("cogfluc") int cogfluc,
-			@RequestParam("cogothrx") String cogothrx ,
-			@RequestParam("cogothr") int cogothr)
+			@RequestParam("cogothr") int cogothr,
+			@RequestParam("cogothrx") String cogothrx)
 	{	  		
 		followupb9v.setDecsub(decsub);
 		followupb9v.setDecin(decin);
@@ -58,16 +62,23 @@ public class FollowupB9Controller {
 	}
 	
 	@RequestMapping(value="/followupb92.do", method=RequestMethod.POST)
-	public String FollowUpVisitB92(Model model,@RequestParam("cogfpred") int cogfpred,@RequestParam("cogfprex") String cogfprex,
-			@RequestParam("cogmodex") String cogmodex,@RequestParam("cogmode") int cogmode,
-			@RequestParam("decage") int decage,@RequestParam("decclbe") int decclbe,@RequestParam("beapathy") int beapathy,
-			@RequestParam("bedep") int bedep,@RequestParam("bevhall") int bevhall,@RequestParam("bevwell") int bevwell,
-			@RequestParam("bevhago") int bevhago,@RequestParam("beahall") int beahall,@RequestParam("bedel") int bedel,
-			@RequestParam("bedisin") int bedisin,@RequestParam("beirrit") int beirrit
-			) 
-	
+	public String FollowUpVisitB92(Model model,
+			@RequestParam("cogfpred") int cogfpred,
+			@RequestParam("cogfprex") String cogfprex,
+			@RequestParam("cogmode") int cogmode,
+			@RequestParam("cogmodex") String cogmodex,
+			@RequestParam("decage") int decage,
+			@RequestParam("decclbe") int decclbe,
+			@RequestParam("beapathy") int beapathy,
+			@RequestParam("bedep") int bedep,
+			@RequestParam("bevhall") int bevhall,
+			@RequestParam("bevwell") int bevwell,
+			@RequestParam("bevhago") int bevhago,
+			@RequestParam("beahall") int beahall,
+			@RequestParam("bedel") int bedel,
+			@RequestParam("bedisin") int bedisin,
+			@RequestParam("beirrit") int beirrit) 
 	{
-		
 		followupb9v.setCogfpred(cogfpred);
 		followupb9v.setCogfprex(cogfprex);
 		followupb9v.setCogmode(cogmode);
@@ -89,24 +100,32 @@ public class FollowupB9Controller {
 		
 	}
 	@RequestMapping(value="/followupb93.do", method=RequestMethod.POST)
-	public String FollowUpVisitB93(Model model,@RequestParam("beagit") int beagit,@RequestParam("beperch") int beperch,
-			@RequestParam("berem") int berem,@RequestParam("beremago") int beremago,@RequestParam("beanx") int beanx,
-			@RequestParam("beothr") int beothr,
+	public String FollowUpVisitB93(Model model,
+			@RequestParam("beagit") int beagit,
+			@RequestParam("beperch") int beperch,
+			@RequestParam("berem") int berem,
+			@RequestParam("beremago") int beremago,
+			@RequestParam("beanx") int beanx,
 			@RequestParam("beothrx") String beothrx,
+			@RequestParam("beothr") int beothr,
 			@RequestParam("befpred") int befpred,
 			@RequestParam("befpredx") String befpredx,
 			@RequestParam("bemode") int bemode,
-			@RequestParam("bemodex") String bemodex,@RequestParam("beage") int beage,@RequestParam("decclmot") int decclmot,@RequestParam("mogait") int mogait,
-			@RequestParam("mofalls") int mofalls,@RequestParam("motrem") int motrem,@RequestParam("moslow") int moslow) 
-	
+			@RequestParam("bemodex") String bemodex,
+			@RequestParam("beage") int beage,
+			@RequestParam("decclmot") int decclmot,
+			@RequestParam("mogait") int mogait,
+			@RequestParam("mofalls") int mofalls,
+			@RequestParam("motrem") int motrem,
+			@RequestParam("moslow") int moslow) 
 	{	  		
 		followupb9v.setBeagit(beagit);
 		followupb9v.setBeperch(beperch);
 		followupb9v.setBerem(berem);
 		followupb9v.setBeremago(beremago);
 		followupb9v.setBeanx(beanx);
-		followupb9v.setBeothr(beothr);
 		followupb9v.setBeothrx(beothrx);
+		followupb9v.setBeothr(beothr);
 		followupb9v.setBefpred(befpred);
 		followupb9v.setBefpredx(befpredx);
 		followupb9v.setBemode(bemode);
@@ -124,12 +143,15 @@ public class FollowupB9Controller {
 	@RequestMapping(value="/followupb94.do", method=RequestMethod.POST)
 	public String FollowUpVisitB94(Model model,
 			@RequestParam("mofrst") int mofrst,
-			@RequestParam("momode") int momode,@RequestParam("momodex") String momodex,
-			@RequestParam("momopark") int momopark,@RequestParam("parkage") int parkage,
-			@RequestParam("momoals") int momoals,@RequestParam("alsage") int alsage,
-			@RequestParam("moage") int moage,@RequestParam("course") int course,
+			@RequestParam("momode") int momode,
+			@RequestParam("momodex") String momodex,
+			@RequestParam("momopark") int momopark,
+			@RequestParam("parkage") int parkage,
+			@RequestParam("momoals") int momoals,
+			@RequestParam("alsage") int alsage,
+			@RequestParam("moage") int moage,
+			@RequestParam("course") int course,
 			@RequestParam("frstchg") int frstchg) 
-	
 	{	  		
 		followupb9v.setMofrst(mofrst);
 		followupb9v.setMomode(momode);
@@ -146,8 +168,9 @@ public class FollowupB9Controller {
 	}
 	
 	@RequestMapping(value="/followupb95.do", method=RequestMethod.POST)
-	public String FollowUpVisitB95(Model model,@RequestParam("lbdeval") int lbdeval,@RequestParam("ftldeval") int ftldeval) 
-	
+	public String FollowUpVisitB95(Model model,
+			@RequestParam("lbdeval") int lbdeval,
+			@RequestParam("ftldeval") int ftldeval) 
 	{	  		
 		followupb9v.setLbdeval(lbdeval);
 		followupb9v.setFtldeval(ftldeval);	

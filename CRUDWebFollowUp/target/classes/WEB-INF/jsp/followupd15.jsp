@@ -12,7 +12,7 @@ body
 margin-left : 200px;
 margin-top : 50px;
 font-family : Arial Black;
-width: 70%;
+width: 1050px;
 min-width: 800px;
 }
 h4
@@ -99,7 +99,7 @@ margin-left : 405px;
 </style>
 </head>
 <body>
-<form:form action="followupd15.do" method="POST" commandName="followupd15">
+
 <table class="smallheader">
 <tr>
 <td><label for="textvalue1" style="margin-left:10px;">Subject ID : </label> &nbsp; <input  type="text" name="SubID" style="margin-left:0px; width:130px;"/></td>
@@ -108,7 +108,7 @@ margin-left : 405px;
 </tr>
 </table>
 <HR COLOR="CornflowerBlue" WIDTH="100%">
-
+<form:form action="followupd15.do" method="POST" commandName="followupd15">
 <br>
 <table class="CDR" width = 100% border=1>
 <tr>
@@ -125,8 +125,8 @@ If significant vascular brain injury is absent,SKIP TO QUESTION 6 <br>
 </td>
 <td><form:input type="radio" name="cvd" path="cvd" value="1" style="margin-left:10px;" />1</td>
 <td>15a<form:input type="radio" name="cvdif" path="cvdif" value="1" style="margin-left:10px;" />1</td>
-<td><form:input type="radio" name="cvdif" path="cvdif value="2" style="margin-left:10px;" />2</td>
-<td><form:input type="radio" name="cvdif" path="cvdif value="3" style="margin-left:10px;" />3</td>
+<td><form:input type="radio" name="cvdif" path="cvdif" value="2" style="margin-left:10px;" />2</td>
+<td><form:input type="radio" name="cvdif" path="cvdif" value="3" style="margin-left:10px;" />3</td>
 </tr>
 
 <tr>
@@ -233,6 +233,7 @@ National Alzheimer's Coordinating Center &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
 <font color ="Black"><b>UDS (V3.0 ,March 2015) Initial Visit</b></font> <font color ="Red"> Form D1 : Clinician Diagnosis</font>
 </p>
 <p class="footer1"> <b>Page 6 of 7</b> </p>
+<input type = "submit" name="action" value="Move to Page 6" style="margin-left:400px;" /> 
 </form:form>
 </body>
 </html>

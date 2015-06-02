@@ -12,7 +12,7 @@ body
 margin-left : 200px;
 margin-top : 50px;
 font-family : Arial Black;
-width: 70%;
+width: 1050px;
 min-width: 800px;
 }
 h4
@@ -269,6 +269,7 @@ National Alzheimer's Coordinating Center &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
 <font color ="Black"><b>UDS (V3.0 ,March 2015) Initial Visit</b></font> <font color ="Red"> Form D1 : Clinician Diagnosis</font>
 </p>
 <p class="footer1"> <b>Page 6 of 7</b> </p>
+<input type = "submit" name="action" value="Move to Page 7" style="margin-left:400px;" /> 
 </form:form>
 </body>
 </html>

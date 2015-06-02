@@ -1,6 +1,7 @@
+<%@page import="com.web.model.FollowupA3, com.web.model.Header"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-
+<%@ include file="/WEB-INF/jsp/includes.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -92,40 +93,90 @@ margin-left : 405px;
 </style>
 </head>
 <body>
+<%
+	Header header = (Header)session.getAttribute("header");
+	FollowupA3 followupa3 = (FollowupA3) session.getAttribute("followupa3");
+%>
+<form:form action="followupa32.do" method="POST" commandName="followupa32">
 <table class="smallheader">
 <tr>
-<td>Subject ID : &nbsp;<input type="text" name="ID" style="margin-left:0px;"/></td>
-<td><label for="textvalue1" style="margin-left:120px;">Form Date : </label> &nbsp; <input type="text" name="MM" style="margin-left:0px; width:20px;"/> &nbsp; / &nbsp; <input type="text" name="DD" style="margin-left:0px; width:20px;"/> &nbsp; / &nbsp;<input type="text" name="YY" style="margin-left:0px; width:70px;"/></td>
-<td><label for="textvalue2" style="margin-left:190px;">Visit # : </label><input type="text" name="Visit" style="margin-left:0px; width:50px;"/></td>
+<td><label for="textvalue1" style="margin-left:10px;">Subject ID : </label> &nbsp; 
+<input type="text" name="ptid" <% if(header.getPtid()!=0){out.print("value=\""+header.getPtid()+"\"");} %> style="margin-left:0px; width:130px;"/></td>
+<td><label for="textvalue2" style="margin-left:180px;">Form date : </label>
+<input type="text" name="visitmo" <% if(header.getVisitmo()!=0){out.print("value=\""+header.getVisitmo()+"\"");} %> style="margin-left:0px; width:20px;"/>/
+<input type="text" name="visitday" <% if(header.getVisitday()!=0){out.print("value=\""+header.getVisitday()+"\"");} %> style="margin-left:0px; width:20px;"/>/
+<input type="text" name="visityr" <% if(header.getVisityr()!=0){out.print("value=\""+header.getVisityr()+"\"");} %> style="margin-left:0px; width:50px;"/>
+<td><label for="textvalue3" style="margin-left:250px;">Visit # : </label>
+<input type="text" name="visitnum" <% if(header.getVisitnum()!=0){out.print("value=\""+header.getVisitnum()+"\"");} %> style="margin-left:0px; width:30px;"/></td>
 </tr>
 </table>
 <HR COLOR="CornflowerBlue" WIDTH="100%">
 <br>
 <br>
+
 <table  width ="100% " style="border: 1px solid CornflowerBlue;">
+<tr bgcolor = "Silver">
+<td  width= "50%">3a. In this family ,is there evidence for an FTLD mutation?If yes <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;select predominant mutation.</td>
+<td width= "50%">
+<input type="radio" name="fftdmut" path="fftdmut" 
+	<%if(followupa3.getFftdmut()==0){out.print(" checked ");}%> value="0" style="margin-left:0px;" />0 No <b>(SKIP TO QUESTION 4a)</b><br />
+<input type="radio" name="fftdmut" path="fftdmut" 
+	<%if(followupa3.getFftdmut()==1){out.print(" checked ");}%> value="1" style="margin-left:0px;" style="margin-left:0px;"/>1 YES ,MAPT<br />
+<input type="radio" name="fftdmut" path="fftdmut" 
+	<%if(followupa3.getFftdmut()==2){out.print(" checked ");}%> value="2"  style="margin-left:0px;" style="margin-left:0px;"/> 2 YES,PGRN<br>
+<input type="radio" name="fftdmut" path="fftdmut" 
+	<%if(followupa3.getFftdmut()==3){out.print(" checked ");}%> value="3"  style="margin-left:0px;" style="margin-left:0px;"/> 3 Yes, C9orf72<br>
+<input type="radio" name="fftdmut" path="fftdmut" 
+	<%if(followupa3.getFftdmut()==4){out.print(" checked ");}%> value="4"  style="margin-left:0px;" style="margin-left:0px;"/> 4 Yes, FUS<br>
+<input type="radio" name="fftdmut" path="fftdmut" 
+	<%if(followupa3.getFftdmut()==8){out.print(" checked ");}%> value="8"  style="margin-left:0px;" style="margin-left:0px;"/> 8 Yes, Other (SPECIFY) : 
+	<input type="text" name="fftdmutx" path="fftdmutx" <% if(followupa3.getFftdmutx()!=null){out.print("value=\""+followupa3.getFftdmutx()+"\"");} %> style="margin-left:0px;"/><br>
+<input type="radio" name="fftdmut" path="fftdmut" 
+	<%if(followupa3.getFftdmut()==9){out.print(" checked ");}%> value="9"  style="margin-left:0px;" style="margin-left:0px;"/> 9 Unknown whether mutation exists <font size=2px> <b> (SKIP TO QUESTION 4a)</b><br></font>
+</td>
+</tr>
 <tr>
 <td width= "50%">3b. Source of evidence for FTLD mutation (check one): <br></td>
-<td width= "50%"><input type="radio" name="option" value="1" style="margin-left:0px;" />1 Family report (no test documentation available)<br />
-<input type="radio" name="option" value="2" style="margin-left:0px;"/>2 Commercial test documentation<br />
-<input type="radio" name="option" value="3"  style="margin-left:0px;"/>3 Research lab test documentation<br />
-<input type="radio" name="option" value="8" style="margin-left:0px;"/>8 Other (SPECIFY):&nbsp;&nbsp; <input type="text" name="ID" style="margin-left:0px;"/><br />
-<input type="radio" name="option" value="9"  style="margin-left:0px;"/>9 Unknown<br />
+<td width= "50%">
+<input type="radio" name="fftdmuso" path="fftdmuso" 
+	<%if(followupa3.getFftdmuso()==1){out.print(" checked ");}%> value="1" style="margin-left:0px;" />1 Family report (no test documentation available)<br />
+<input type="radio" name="fftdmuso" path="fftdmuso" 
+	<%if(followupa3.getFftdmuso()==2){out.print(" checked ");}%> value="2" style="margin-left:0px;"/>2 Commercial test documentation<br />
+<input type="radio" name="fftdmuso" path="fftdmuso" 
+	<%if(followupa3.getFftdmuso()==3){out.print(" checked ");}%> value="3"  style="margin-left:0px;"/>3 Research lab test documentation<br />
+<input type="radio" name="fftdmuso" path="fftdmuso" 
+	<%if(followupa3.getFftdmuso()==8){out.print(" checked ");}%> value="8" style="margin-left:0px;"/>8 Other (SPECIFY):&nbsp;&nbsp; 
+	<input type="text" name="fftdmusx" path="fftdmusx" <% if(followupa3.getFftdmusx()!=null){out.print("value=\""+followupa3.getFftdmusx()+"\"");} %> style="margin-left:0px;"/><br />
+<input type="radio" name="fftdmuso" path="fftdmuso" 
+	<%if(followupa3.getFftdmuso()==9){out.print(" checked ");}%> value="9"  style="margin-left:0px;"/>9 Unknown<br />
 </td>
 </tr>
 <tr bgcolor = "Silver">
 <td  width= "50%">4a. In this family ,is there evidence for an AD mutation other than an <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AD or FTLD mutation?<br>(If No or Unknown , <b> SKIP TO Question 5)</b> </td>
-<td width= "50%"><input type="radio" name="option" value="0" style="margin-left:0px;" />0 No <b> < (SKIP TO QUESTION 5)</b><br />
-<input type="radio" name="option" value="8"  style="margin-left:0px;" style="margin-left:0px;"/> 1 YES,(SPECIFY) : <input type="text" name="ID" style="margin-left:0px;"/><br>
-<input type="radio" name="option" value="9"  style="margin-left:0px;" style="margin-left:0px;"/> 9 Unknown <font size=2px> <b> (SKIP TO QUESTION 5)</b><br></font>
+<td width= "50%">
+<input type="radio" name="fothmut" path="fothmut" 
+	<%if(followupa3.getFothmut()==0){out.print(" checked ");}%> value="0" style="margin-left:0px;" />0 No <b> (SKIP TO QUESTION 5)</b><br />
+<input type="radio" name="fothmut" path="fothmut" 
+	<%if(followupa3.getFothmut()==8){out.print(" checked ");}%> value="8"  style="margin-left:0px;" style="margin-left:0px;"/> 1 YES,(SPECIFY) : 
+	<input type="text" name="fothmutx" path="fothmutx" <% if(followupa3.getFothmutx()!=null){out.print("value=\""+followupa3.getFothmutx()+"\"");} %> style="margin-left:0px;"/><br>
+<input type="radio" name="fothmut" path="fothmut" 
+	<%if(followupa3.getFothmut()==9){out.print(" checked ");}%> value="9"  style="margin-left:0px;" style="margin-left:0px;"/> 9 Unknown <font size=2px> <b> (SKIP TO QUESTION 5)</b><br></font>
 </td>
 </tr>
 <tr>
 <td width= "50%">4b. Source of evidence for other mutation (check one): </td>
-<td width= "50%"><input type="radio" name="option" value="1" style="margin-left:0px;" />1 Family report (no test documentation available)<br />
-<input type="radio" name="option" value="2" style="margin-left:0px;"/>2 Commercial test documentation<br />
-<input type="radio" name="option" value="3"  style="margin-left:0px;"/>3 Research lab test documentation<br />
-<input type="radio" name="option" value="8" style="margin-left:0px;"/>8 Other (Specify) : <input type="text" name="Other" style="margin-left:0px;"/><br />
-<input type="radio" name="option" value="9"  style="margin-left:0px;"/>9 Unknown<br /></td>
+<td width= "50%">
+<input type="radio" name="fothmuso" path="fothmuso" 
+	<%if(followupa3.getFothmuso()==1){out.print(" checked ");}%> value="1" style="margin-left:0px;" />1 Family report (no test documentation available)<br />
+<input type="radio" name="fothmuso" path="fothmuso" 
+	<%if(followupa3.getFothmuso()==2){out.print(" checked ");}%> value="2" style="margin-left:0px;"/>2 Commercial test documentation<br />
+<input type="radio" name="fothmuso" path="fothmuso" 
+	<%if(followupa3.getFothmuso()==3){out.print(" checked ");}%> value="3"  style="margin-left:0px;"/>3 Research lab test documentation<br />
+<input type="radio" name="fothmuso" path="fothmuso" 
+	<%if(followupa3.getFothmuso()==8){out.print(" checked ");}%> value="8" style="margin-left:0px;"/>8 Other (Specify) : 
+	<input type="text" name="fothmusx" path="fothmusx"  <% if(followupa3.getFothmusx()!=null){out.print("value=\""+followupa3.getFothmusx()+"\"");} %> style="margin-left:0px;"/><br />
+<input type="radio" name="fothmuso" path="fothmuso" 
+	<%if(followupa3.getFothmuso()==9){out.print(" checked ");}%> value="9"  style="margin-left:0px;"/>9 Unknown<br /></td>
 </tr>
 </table>
 
@@ -133,102 +184,13 @@ margin-left : 405px;
 <br>
 
 
-<p class="odd">
-<label for="text11" style= "color :White;"> BIOLOGICAL PARENTS</label>
-</p>
-<p class="even">
-5. Since the last UDS visit, is new information available concerning the status of the subject's biological mother or father?<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="option" value="0" style="margin-left:0px;"/>0 No <font size=2px><b> (SKIP TO QUESTION 6)</b></font>
-<input type="radio" name="option" value="1"  style="margin-left:150px;"/>1 Yes<font size=2px> <b>(COMPLETE QUESTION 5A-5B,AS APPLICABLE) </b></font><br /><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If birth year is unknown,please provide an approximate year on the Initial Visit Form A3 and ensure that is<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;consistently reported on all Forms A3 submitted (Initial Visit and Follow-up). If it is impossible for the subject <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and co-participant to estimate year of birth, enter 9999=unknown.For any biological parent with a neurological <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or psychiatric problem,the entire row must be filled out.If the clinician cannot determine the primary <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;neurological problem/psychiatric condition after reviewing all available evidence,enter 9=Unknown in the <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> Primary neurological problem/psychiatric condition</b> column , and then skip the subsequent question in the row.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If the parent has no neurological or psychiatric problem , enter 8=N/A - no neurological problem or psychiatric <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;condition in the <b> Primary neurological problem/psychiatric condition </b>column , and then skip the subsequent <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;question in the row<br> 
-</p>
-<table class="Biological" border=1>
-<tr>
-<td width= "20%"></td>
-<td width= "20%"><font size=2px><b> Birth month/year (99/9999=Unknown)</b></font></td>
-<td width= "10%"><font size=2px><b> Age at death (888 =N/A,999 =Unknown)</b></font></td>
-<td width= "20%"><font size=2px><b> Primary neurological problem/psychiatric condition *</b></font></td>
-<td width= "10%"><font size=2px><b> Primary Dx**</b></font></td>
-<td width= "10%"><font size=2px><b> Method of evaluation***</b></font></td>
-<td width= "10%"><font size=2px><b> Age of onset (999=unknown)</b></font></td>
-</tr>
-<tr>
-<td width= "20%"> 5a. Mother </td>
-<td width= "20%"><input type="text" name="MMM"  style="margin-left:20px; width:20px ;"/>/<input type="text" name="Year" style="margin-left:0px; width:60px ;"/></td>
-<td width= "10%"><input type="text" name="MAge"   style="margin-left:20px; width:40px"/></td>
-<td width= "20%"><input type="text" name="MCondition"  style="margin-left:70px;width:20px"/></td>
-<td width= "10%"><input type="text" name="MPrimary"   style="margin-left:30px;width:20px"/></td>
-<td width= "10%"><input type="text" name="MMethod"   style="margin-left:30px;width:20px"/></td>
-<td width= "10%"><input type="text" name="MAgeOnset"   style="margin-left:30px;width:20px"/></td>
-</tr>
-<tr>
-<td width= "20%"> 5b. Father </td>
-<td width= "20%"><input type="text" name="FMM"  style="margin-left:20px; width:20px ;"/>/<input type="text" name="Year" style="margin-left:0px; width:60px ;"/></td>
-<td width= "10%"><input type="text" name="FAge"   style="margin-left:20px; width:40px"/></td>
-<td width= "20%"><input type="text" name="FCondition"  style="margin-left:70px;width:20px"/></td>
-<td width= "10%"><input type="text" name="FPrimary"   style="margin-left:30px;width:20px"/></td>
-<td width= "10%"><input type="text" name="FMethod"   style="margin-left:30px;width:20px"/></td>
-<td width= "10%"><input type="text" name="FAgeOnset"   style="margin-left:30px;width:20px"/></td>
-</tr>
-</table>
 
-<br>
-<br>
-<table class ="A4">
-<tr><td> *CODES for neurological problems and<br>
-psychiatric conditions</td></tr>
-<tr><td>1 Cognitive impairment/behavior change </td></tr>
-<tr><td>2 Parkinsonism </td></tr>
-<tr><td>3 ALS </td></tr>
-<tr><td>4 Other neurologic condition such as multiple<br> sclerosis or stroke </td></tr>
-<tr><td>5 Psychiatric condition such as schizophrenia, <br> bipolar disorder,alcoholism,or depression </td></tr>
-<tr><td>8 N/A--no neurological problem or psychiatric <br>condition </td></tr>
-<tr><td>9 Unknown </td></tr>
-</table>
-
-
-<table class="A4" style= "margin-left : 100px;">
-<tr><td> **CODES for primary disgnosis</td></tr>
-<tr><td>See Appendix 1 on page 5 of this form </td></tr>
-</table>
-
-
- <table class ="A4" style="margin-left : 130px;">
-<tr><td> ***CODES for method of evaluation</td></tr>
-<tr><td>1 Autopsy </td></tr>
-<tr><td>2 Examination </td></tr>
-<tr><td>3 medical record review from formal <br>dementia evaluation </td></tr>
-<tr><td>4 Review of general medical records AND <br> co-participant and/or subject telephone <br> interview </td></tr>
-<tr><td>5 Review of general medical records only </td></tr>
-<tr><td>6 Subject and/or co-participant telephone <br>interview </td></tr>
-<tr><td>9 Family report </td></tr>
-</table>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<br><br>
-<br>
-<br>
-<br>
-<br>
 <p class="footer">
 National Alzheimer's Coordinating Center &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;(206) 543 -8637 &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;fax :(206) 616-5927 &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; naccmail@uw.edu  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;  www.alz.washington.edu<br>
 <font color ="Black"><b>UDS (V3.0 ,March 2015) Follow-up Visit</b></font> <font color = "Red">Form A3 : Subject Family History </font>  
 </p>
 <p class="footer1"> <b>Page 2 of 5</b> </p>
-
+<input type = "submit" name="action" value="Move to Page 3" style="margin-left:400px;" />
+</form:form>
 </body>
 </html>

@@ -1,4 +1,5 @@
 package com.web.model;
+
 import java.io.Serializable;
 
 import javax.persistence.Column;
@@ -6,23 +7,17 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-//import persistance.entities.Subjects.Subject;
-//import persistance.entities.Users.User;
-@Entity
-public class FollowupA2 implements Serializable{
 
-	/**
-	 * 
-	 */
+@Entity
+public class FollowupA2 implements Serializable
+{
 	private static final long serialVersionUID = 1L;
-	/*User user;
-	Subject subject;
-	Header header;*/
+	
 	@Id
 	@Column
 	@GeneratedValue(strategy=GenerationType.AUTO) //for autonumber
 	int a2;
+	
 	@Column
 	int inbirmo;
 	@Column
@@ -63,23 +58,22 @@ public class FollowupA2 implements Serializable{
 	int incalls;
 	@Column
 	int inrely;
-		
-	public FollowupA2() {
+	@Column
+	int header_fk_followupa2;
+
+	public FollowupA2(){
 		super();
 	}
-
-	public FollowupA2(int a2, int inbirmo, int inbiryr, int insex, int newinf,int inhisp,
-			int inhispor, String inhispox, int inrace, String inracex,
-			int inrasec, String inrasecx, int inrater, String inraterx,
-			int ineduc, int inrelto, int inknown, int inlivwth, int invisits,
-			int incalls, int inrely) {
+	
+	public FollowupA2(int a2, int inbirmo, int inbiryr, int insex, int newinf, int inhisp, int inhispor, String inhispox, int inrace, String inracex, int inrasec, String inrasecx, int inrater, String inraterx, int ineduc, int inrelto, int inknown, int inlivwth, int invisits, int incalls, int inrely, int header_fk_followupa2)
+	{
 		super();
 		this.a2 = a2;
 		this.inbirmo = inbirmo;
 		this.inbiryr = inbiryr;
-		this.insex = insex;
+		this.insex = insex; 
 		this.newinf = newinf;
-		this.inhisp = inhisp;
+		this.inhisp= inhisp;
 		this.inhispor = inhispor;
 		this.inhispox = inhispox;
 		this.inrace = inrace;
@@ -95,66 +89,8 @@ public class FollowupA2 implements Serializable{
 		this.invisits = invisits;
 		this.incalls = incalls;
 		this.inrely = inrely;
+		this.header_fk_followupa2 = header_fk_followupa2;
 	}
-
-	/*public FollowupA2(User user, Subject subject, Header header, int a2, int newinf,int inbirmo,
-			int inbiryr, int insex, int inhisp, int inhispor, String inhispox,
-			int inrace, String inracex, int inrasec, String inrasecx,
-			int inrater, String inraterx, int ineduc, int inrelto, int inknown,
-			int inlivwth, int invisits, int incalls, int inrely) {
-		super();
-		this.user = user;
-		this.subject = subject;
-		this.header = header;
-		this.a2 = a2;
-		this.inbirmo = inbirmo;
-		this.inbiryr = inbiryr;
-		this.insex = insex;
-		this.newinf = newinf;
-		this.inhisp = inhisp;
-		this.inhispor = inhispor;
-		this.inhispox = inhispox;
-		this.inrace = inrace;
-		this.inracex = inracex;
-		this.inrasec = inrasec;
-		this.inrasecx = inrasecx;
-		this.inrater = inrater;
-		this.inraterx = inraterx;
-		this.ineduc = ineduc;
-		this.inrelto = inrelto;
-		this.inknown = inknown;
-		this.inlivwth = inlivwth;
-		this.invisits = invisits;
-		this.incalls = incalls;
-		this.inrely = inrely;
-	}
-
-	@ManyToOne
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
-	}
-
-	@ManyToOne
-	public Subject getSubject() {
-		return subject;
-	}
-
-	public void setSubject(Subject subject) {
-		this.subject = subject;
-	}
-
-	@ManyToOne
-	public Header getHeader() {
-		return header;
-	}
-
-	public void setHeader(Header header) {
-		this.header = header;
-	}*/
 
 	public int getA2() {
 		return a2;
@@ -186,6 +122,14 @@ public class FollowupA2 implements Serializable{
 
 	public void setInsex(int insex) {
 		this.insex = insex;
+	}
+
+	public int getNewinf() {
+		return newinf;
+	}
+
+	public void setNewinf(int newinf) {
+		this.newinf = newinf;
 	}
 
 	public int getInhisp() {
@@ -315,12 +259,12 @@ public class FollowupA2 implements Serializable{
 	public void setInrely(int inrely) {
 		this.inrely = inrely;
 	}
-	public int getNewinf() {
-		return newinf;
+
+	public int getHeader_fk_followupa2() {
+		return header_fk_followupa2;
 	}
 
-	public void setNewinf(int newinf) {
-		this.newinf = newinf;
+	public void setHeader_fk_followupa2(int header_fk_followupa2) {
+		this.header_fk_followupa2 = header_fk_followupa2;
 	}
-
 }

@@ -17,7 +17,6 @@ public class FollowupA1DaoImpl implements FollowupA1Dao {
 	@Override
 	public void add(FollowupA1 followupa1) {
 		session.getCurrentSession().save(followupa1);
-
 	}
 
 	@Override

@@ -81,6 +81,62 @@ margin-left : 405px;
     right: 0px;
 }
 </style>
+<script type="text/javascript">
+function validate()
+{ 
+	var height = document.getElementById("height").value;
+	if(height < 36.0 || hearwaid > 87.9)
+	{
+	 window.alert( "Please enter a valid Height" );
+	 return false;
+	}
+	var wieght = document.getElementById("wieght").value;
+	if(wieght < 50 || wieght > 400)
+	{
+	 window.alert( "Please enter a valid Weight" );
+	 return false;
+	}
+	var bpsys = document.getElementById("bpsys").value;
+	if(wieght < 70 || wieght > 230)
+	{
+	 window.alert( "Please enter a valid Blood Pressure" );
+	 return false;
+	}
+	var bpdias = document.getElementById("bpdias").value;
+	if(bpdias < 30 || bpdias > 140)
+	{
+	 window.alert( "Please enter a valid Blood Pressure" );
+	 return false;
+	}
+	var hrate = document.getElementById("hrate").value;
+	if(hrate < 33 || hrate > 160)
+	{
+	 window.alert( "Please enter a valid Blood Pressure" );
+	 return false;
+	}
+	
+	var hearaids = document.getElementsByName('hearaid');
+	var hearaid;
+	for(var i = 0; i < hearaids.length; i++){
+	    if(hearaids[i].checked){
+	    	hearaid = hearaids[i].value;
+	    }
+	}
+	var hearwaids = document.getElementsByName('hearwaid');
+	var hearwaid;
+	for(var i = 0; i < hearwaids.length; i++){
+	    if(hearwaids[i].checked){
+	    	hearwaid = hearwaids[i].value;
+	    }
+	}
+	
+	if(hearaid == 1 && (hearwaid != 0 || hearwaid != 1 || hearwaid != 9))
+	{
+	 window.alert( "Please enter a subject's normal hearing." );
+	 return false;
+	}
+}
+</script>
 </head>
 <body>
 <div id="content">
@@ -109,7 +165,7 @@ margin-left : 405px;
 for Follow-Up Visit Packet , Form B1.Check only <u>one</u> box per question.</i></font>
 <br><br>
 <br>
-<form:form action="followupb1.do" method="POST" commandName="followupb1">
+<form:form action="followupb1.do" method="POST" commandName="followupb1" onsubmit="return validate();">
 <p class="odd" style= "color :White;">
 <label for="textvalue11"> Subject physical measurement</label>
 </p>
@@ -126,13 +182,13 @@ for Follow-Up Visit Packet , Form B1.Check only <u>one</u> box per question.</i>
 
 <p class="even">
 <label for="textvalue3">3.  Subject blood pressure at initial reading (sitting)</label>
-<form:input type="text" name="blood" required="required" path="bpsys"  size="3" maxlength="3" style="margin-left:50px;"/> / 
-<form:input type="text" name="blood1" required="required" path="bpdias"  size="3" maxlength="3" style="margin-left:0px;"/> <b>&nbsp;&nbsp;(888/888 = not assessed)</b>
+<form:input type="text" name="bpsys" required="required" path="bpsys"  size="3" maxlength="3" style="margin-left:50px;"/> / 
+<form:input type="text" name="bpdias" required="required" path="bpdias"  size="3" maxlength="3" style="margin-left:0px;"/> <b>&nbsp;&nbsp;(888/888 = not assessed)</b>
 </p>
 
 <p class="even">
 <label for="textvalue4">4.  Subject resting heart rate (pulse)</label>
-<form:input type="text" required="required" name="heart" path="hrate" size="3" maxlength="3" style="margin-left:50px;"/> <b>&nbsp;&nbsp;(888 = not assessed)</b>
+<form:input type="text" required="required" name="hrate" path="hrate" size="3" maxlength="3" style="margin-left:50px;"/> <b>&nbsp;&nbsp;(888 = not assessed)</b>
 </p>
 
 <p class="odd" style= "color :White;">
@@ -140,49 +196,49 @@ Additional physical Observation  <font size="3px" style="margin-left:480px;">No 
 </p>
 <p class="lense" >
 <label for="textvalue5">5.  Without corrective lenses , is the subject's vision functionally normal?</label>
-<form:input type="radio" name="b1lense" required="required" path="vision" value="0" style="margin-left:80px;"/>0
-<form:input type="radio" name="b1lense" required="required" path="vision" value="1" style="margin-left:60px;"/>1
-<form:input type="radio" name="b1lense" required="required" path="vision" value="9" style="margin-left:60px;"/>9
+<form:input type="radio" name="vision" required="required" path="vision" value="0" style="margin-left:80px;"/>0
+<form:input type="radio" name="vision" required="required" path="vision" value="1" style="margin-left:60px;"/>1
+<form:input type="radio" name="vision" required="required" path="vision" value="9" style="margin-left:60px;"/>9
 </p>
 
 <p class="lense">
 <label for="textvalue6">6.  Does the subject usually wear corrective lenses?<br>
  <font size=2px> (If no or unknown ,<b> SKIP TO QUESTION 7</b>)</font></label>
-<form:input type="radio" required="required" name="b1clense" path="viscorr" value="0" style="margin-left:80px;"/>0
-<form:input type="radio" required="required" name="b1clense" path="viscorr" value="1" style="margin-left:60px;"/>1
-<form:input type="radio" required="required" name="b1clense" path="viscorr" value="9" style="margin-left:60px;"/>9
+<form:input type="radio" required="required" name="viscorr" path="viscorr" value="0" style="margin-left:80px;"/>0
+<form:input type="radio" required="required" name="viscorr" path="viscorr" value="1" style="margin-left:60px;"/>1
+<form:input type="radio" required="required" name="viscorr" path="viscorr" value="9" style="margin-left:60px;"/>9
 </p>
 
 
 <p class="lense">
 <label for="textvalue7">&nbsp;&nbsp;&nbsp;&nbsp;6a.  If yes,is the subject's vision functionally normal <u> with</u> corrective lenses?</label>
-<form:input type="radio" required="required" name="b1nlense" path="viswcorr" value="0" style="margin-left:80px;"/>0
-<form:input type="radio" required="required" name="b1nlense" path="viswcorr" value="1" style="margin-left:60px;"/>1
-<form:input type="radio" required="required" name="b1nlense" path="viswcorr" value="9" style="margin-left:60px;"/>9
+<form:input type="radio" required="required" name="viswcorr" path="viswcorr" value="0" style="margin-left:80px;"/>0
+<form:input type="radio" required="required" name="viswcorr" path="viswcorr" value="1" style="margin-left:60px;"/>1
+<form:input type="radio" required="required" name="viswcorr" path="viswcorr" value="9" style="margin-left:60px;"/>9
 </p>
 
 
 <p class="lense">
 <label for="textvalue8">7.  Without a hearing aid(s), is the subject's hearing functionally normal?</label>
-<form:input type="radio" name="b1waid" required="required" path="hearing" value="0" style="margin-left:80px;"/>0
-<form:input type="radio" name="b1waid" required="required" path="hearing" value="1" style="margin-left:60px;"/>1
-<form:input type="radio" name="b1waid" required="required" path="hearing" value="9" style="margin-left:60px;"/>9
+<form:input type="radio" name="hearing" required="required" path="hearing" value="0" style="margin-left:80px;"/>0
+<form:input type="radio" name="hearing" required="required" path="hearing" value="1" style="margin-left:60px;"/>1
+<form:input type="radio" name="hearing" required="required" path="hearing" value="9" style="margin-left:60px;"/>9
 </p>
 
 
 <p class="lense">
 <label for="textvalue9">8.  Does the subject usually wear a  hearing aid(s) ?
 <br><font size=2px> (If no or unknown ,<b> END FORM HERE</b>)</font></label>
-<form:input type="radio" required="required" name="b1yesaid" path="hearaid" value="0" style="margin-left:80px;"/>0
-<form:input type="radio" required="required" name="b1yesaid" path="hearaid" value="1" style="margin-left:60px;"/>1
-<form:input type="radio" required="required" name="b1yesaid" path="hearaid" value="9" style="margin-left:60px;"/>9
+<form:input type="radio" required="required" name="hearaid" path="hearaid" value="0" style="margin-left:80px;"/>0
+<form:input type="radio" required="required" name="hearaid" path="hearaid" value="1" style="margin-left:60px;"/>1
+<form:input type="radio" required="required" name="hearaid" path="hearaid" value="9" style="margin-left:60px;"/>9
 </p>
 
 <p class="lense">
 <label for="textvalue10">&nbsp;&nbsp;&nbsp;&nbsp;8a.  If yes, is the subject's hearing functionally normal <u> with </u> hearing aid(s)? </label>
-<form:input type="radio" required="required" name="b1ynaid" path="hearwaid" value="0" style="margin-left:80px;"/>0
-<form:input type="radio" required="required" name="b1ynaid" path="hearwaid" value="1" style="margin-left:60px;"/>1
-<form:input type="radio" required="required" name="b1ynaid" path="hearwaid" value="9" style="margin-left:60px;"/>9
+<form:input type="radio"  name="hearwaid" path="hearwaid" value="0" style="margin-left:80px;"/>0
+<form:input type="radio"  name="hearwaid" path="hearwaid" value="1" style="margin-left:60px;"/>1
+<form:input type="radio"  name="hearwaid" path="hearwaid" value="9" style="margin-left:60px;"/>9
 </p>
 
 <br>

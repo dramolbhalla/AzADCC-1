@@ -16,6 +16,7 @@ public class FollowupD1DaoImpl implements FollowupD1Dao{
 
 	@Override
 	public void add(FollowupD1 followupd1) {
+		System.out.println("Value of demented::" + followupd1.getDemented());
 		session.getCurrentSession().save(followupd1);
 		
 	}
@@ -39,6 +40,6 @@ public class FollowupD1DaoImpl implements FollowupD1Dao{
 
 	@Override
 	public List getAllFollowupD1() {
-		return session.getCurrentSession().createQuery("from D1").list();
+		return session.getCurrentSession().createQuery("from FollowupD1").list();
 	}
 }

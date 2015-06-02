@@ -7,24 +7,24 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.web.dao.FollowupA2Dao;
-import com.web.model.FollowupA1;
 import com.web.model.FollowupA2;
+
 @Repository
-public class FollowupA2DaoImpl implements FollowupA2Dao {
-	
+public class FollowupA2DaoImpl implements FollowupA2Dao 
+{
+
 	@Autowired
 	private SessionFactory session;
-
+	
 	@Override
-	public void add(FollowupA2 followupa2) {
-		System.out.println("From DAO : "+followupa2.getIneduc());
-		session.getCurrentSession().save(followupa2);
+	public void add(FollowupA2 followupA2) {
+		session.getCurrentSession().save(followupA2);
 		
 	}
 
 	@Override
-	public void edit(FollowupA2 followupa2) {
-		session.getCurrentSession().update(followupa2);
+	public void edit(FollowupA2 followupA2) {
+		session.getCurrentSession().update(followupA2);
 		
 	}
 
@@ -35,7 +35,8 @@ public class FollowupA2DaoImpl implements FollowupA2Dao {
 	}
 
 	@Override
-	public FollowupA2 getFollowupA2(int a2) {
+	public FollowupA2 getFollowupA2(int a2) 
+	{
 		return (FollowupA2)session.getCurrentSession().get(FollowupA2.class, a2);
 	}
 
@@ -43,6 +44,4 @@ public class FollowupA2DaoImpl implements FollowupA2Dao {
 	public List getAllFollowupA2() {
 		return session.getCurrentSession().createQuery("from FollowupA2").list();
 	}
-
 }
-

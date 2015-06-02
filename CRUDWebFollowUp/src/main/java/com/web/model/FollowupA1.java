@@ -12,7 +12,7 @@ import javax.persistence.ManyToOne;
 @Entity
 public class FollowupA1 implements Serializable {
 	
-		/**
+	/**
 	 * 
 	 */
 	    private static final long serialVersionUID = 1L;

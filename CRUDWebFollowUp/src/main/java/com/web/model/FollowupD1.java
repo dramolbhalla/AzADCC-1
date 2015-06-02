@@ -29,7 +29,7 @@ public class FollowupD1 implements Serializable{
 	@Column
 	int normcog;
 	@Column
-	int demented;
+	Integer demented;
 	@Column
 	int amndem;
 	@Column
@@ -271,7 +271,7 @@ public class FollowupD1 implements Serializable{
 		super();
 	}
 
-	public FollowupD1(int d1, int dxmethod, int normcog, int demented, int amndem,
+	public FollowupD1(int d1, int dxmethod, int normcog, Integer demented, int amndem,
 			int pca, int ppasyn, int ppasynt, int ftdsyn, int lbdsyn,
 			int namndem, int mciamem, int mciaplus, int mciaplan, int mciapatt,
 			int mciapex, int mciapvis, int mcinon1, int mcin1lan, int mcin1att,
@@ -300,7 +300,7 @@ public class FollowupD1 implements Serializable{
 		this.d1 = d1;
 		this.dxmethod = dxmethod;
 		this.normcog = normcog;
-		this.demented = demented;
+		this.demented = demented.intValue();
 		this.amndem = amndem;
 		this.pca = pca;
 		this.ppasyn = ppasyn;
@@ -626,12 +626,14 @@ public class FollowupD1 implements Serializable{
 		this.normcog = normcog;
 	}
 
-	public int getDemented() {
+	public Integer getDemented() {
+		//if(demented!=null)
 		return demented;
 	}
 
-	public void setDemented(int demented) {
-		this.demented = demented;
+	public void setDemented(Integer demented) {
+		if(demented!=null)
+		this.demented = demented.intValue();
 	}
 
 	public int getAmndem() {

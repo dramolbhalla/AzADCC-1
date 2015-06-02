@@ -178,7 +178,7 @@ If any of the conditions below are present (even if successfully treated), pleas
   </tr>
   <tr>
   <td height="40" style="width:70%;">&nbsp;&nbsp;&nbsp;22. Antibody-mediated encephalopathy <br>
-  <font size=2px >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 22a. Specify antibody :&nbsp;&nbsp;&nbsp;</font><form:input type="text" name="month" path="antiencx" style="margin-left:0px; width:400px;"/>
+  <font size=2px >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 22a. Specify antibody :&nbsp;&nbsp;&nbsp;</font><form:input type="text" name="antiencx" path="antiencx" style="margin-left:0px; width:400px;"/>
   </td>
    <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="antienc" required ="required" path="antienc" value="0" />&nbsp;0</td>
    <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="antienc" required ="required" path="antienc" value="1" />&nbsp;1</td>
@@ -186,7 +186,7 @@ If any of the conditions below are present (even if successfully treated), pleas
   </tr>
   <tr>
   <td height="40" style="width:70%;">&nbsp;&nbsp;&nbsp;23. Other medical conditions or procedures not listed above <br>
-  <font size=2px >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (IF YES, SPECIFY):&nbsp;&nbsp;&nbsp;</font><form:input type="text" name="month" path="othcondx" style="margin-left:0px; width:400px;"/>
+  <font size=2px >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (IF YES, SPECIFY):&nbsp;&nbsp;&nbsp;</font><form:input type="text" name="othcondx" path="othcondx" style="margin-left:0px; width:400px;"/>
   </td>
    <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="othcond" required ="required" path="othcond" value="0" />&nbsp;0</td>
    <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="othcond" required ="required" path="othcond" value="1" />&nbsp;1</td>

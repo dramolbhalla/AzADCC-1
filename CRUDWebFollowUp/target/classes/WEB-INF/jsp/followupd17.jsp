@@ -12,7 +12,7 @@ body
 margin-left : 200px;
 margin-top : 50px;
 font-family : Arial Black;
-width: 70%;
+width: 1050px;
 min-width: 800px;
 }
 h4
@@ -128,63 +128,63 @@ margin-left : 405px;
 <tr>
 <td> 34. Cognitive impairment due to other substance abuse<br>
 </td>
-<td><form:input type="radio" name="cogother" path="cogother" value="1" style="margin-left:10px;" />1</td>
-<td>34a<form:input type="radio" name="cogotherset" path="cogotherset" value="1" style="margin-left:10px;" />1</td>
-<td><form:input type="radio" name="cogotherset" path="cogotherset" value="2" style="margin-left:10px;" />2</td>
-<td><form:input type="radio" name="cogotherset" path="cogotherset" value="3" style="margin-left:10px;" />3</td>
+<td><form:input type="radio" name="impsub" path="impsub" value="1" style="margin-left:10px;" />1</td>
+<td>34a<form:input type="radio" name="impsubif" path="impsubif" value="1" style="margin-left:10px;" />1</td>
+<td><form:input type="radio" name="impsubif" path="impsubif" value="2" style="margin-left:10px;" />2</td>
+<td><form:input type="radio" name="impsubif" path="impsubif" value="3" style="margin-left:10px;" />3</td>
 </tr>
 
 <tr>
 <td> 35. Cognitive impairment due to systemic disease/medical illness (as indicated on form D2)<br>
 </td>
-<td><form:input type="radio" name="systemic" path="systemic" value="1" style="margin-left:10px;" />1</td>
-<td>35a<form:input type="radio" name="systemicset" path="systemicset" value="1" style="margin-left:10px;" />1</td>
-<td><form:input type="radio" name="systemicset" path="systemicset" value="2" style="margin-left:10px;" />2</td>
-<td><form:input type="radio" name="systemicset" path="systemicset" value="3" style="margin-left:10px;" />3</td>
+<td><form:input type="radio" name="dysill" path="dysill" value="1" style="margin-left:10px;" />1</td>
+<td>35a<form:input type="radio" name="dysillif" path="dysillif" value="1" style="margin-left:10px;" />1</td>
+<td><form:input type="radio" name="dysillif" path="dysillif" value="2" style="margin-left:10px;" />2</td>
+<td><form:input type="radio" name="dysillif" path="dysillif" value="3" style="margin-left:10px;" />3</td>
 </tr>
 
 <tr>
 <td> 36. Cognitive impairment due to medication<br>
 </td>
-<td><form:input type="radio" name="cogmed" path="cogmed" value="1" style="margin-left:10px;" />1</td>
-<td>36a<form:input type="radio" name="cogmedset" path="cogmedset" value="1" style="margin-left:10px;" />1</td>
-<td><form:input type="radio" name="cogmedset" path="cogmedset" value="2" style="margin-left:10px;" />2</td>
-<td><form:input type="radio" name="cogmedset" path="cogmedset" value="3" style="margin-left:10px;" />3</td>
+<td><form:input type="radio" name="meds" path="meds" value="1" style="margin-left:10px;" />1</td>
+<td>36a<form:input type="radio" name="medsif" path="medsif" value="1" style="margin-left:10px;" />1</td>
+<td><form:input type="radio" name="medsif" path="medsif" value="2" style="margin-left:10px;" />2</td>
+<td><form:input type="radio" name="medsif" path="medsif" value="3" style="margin-left:10px;" />3</td>
 </tr>
 
 <tr>
 <td> 37. Cognitive impairment NOS<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;37b. If Present,specify: <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="text" name="cogpresent1" path="cogpresent1" size = "25" maxlength = "25" style="margin-left:0px;"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="cogpresent1" size = "25" maxlength = "25" style="margin-left:0px;"/>
 </td>
-<td><form:input type="radio" name="NOS1" path="NOS1" value="1" style="margin-left:10px;" />1</td>
-<td>37a<form:input type="radio" name="cogset1" path="cogset1" value="1" style="margin-left:10px;" />1</td>
-<td><form:input type="radio" name="cogset1" path="cogset1" value="2" style="margin-left:10px;" />2</td>
-<td><form:input type="radio" name="cogset1" path="cogset1" value="3" style="margin-left:10px;" />3</td>
+<td><input type="radio" name="NOS1" value="1" style="margin-left:10px;" />1</td>
+<td>37a<input type="radio" name="cogset1" value="1" style="margin-left:10px;" />1</td>
+<td><input type="radio" name="cogset1" value="2" style="margin-left:10px;" />2</td>
+<td><input type="radio" name="cogset1" value="3" style="margin-left:10px;" />3</td>
 </tr>
 <tr>
 <td> 38. Cognitive impairment NOS<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;37b. If Present,specify: <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="text" name="cogpresent2" path="cogpresent2" size = "25" maxlength = "25" style="margin-left:0px;"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="cogpresent2" size = "25" maxlength = "25" style="margin-left:0px;"/>
 </td>
-<td><form:input type="radio" name="NOS2" path="NOS2" value="1" style="margin-left:10px;" />1</td>
-<td>38a<form:input type="radio" name="cogset2" path="cogset2" value="1" style="margin-left:10px;" />1</td>
-<td><form:input type="radio" name="cogset2" path="cogset2" value="2" style="margin-left:10px;" />2</td>
-<td><form:input type="radio" name="cogset2" path="cogset2" value="3" style="margin-left:10px;" />3</td>
+<td><input type="radio" name="NOS2" value="1" style="margin-left:10px;" />1</td>
+<td>38a<input type="radio" name="cogset2" value="1" style="margin-left:10px;" />1</td>
+<td><input type="radio" name="cogset2" value="2" style="margin-left:10px;" />2</td>
+<td><input type="radio" name="cogset2" value="3" style="margin-left:10px;" />3</td>
 </tr>
 <tr>
 <td> 39. Cognitive impairment NOS<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;37b. If Present,specify: <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="text" name="cogpresent3" path="cogpresent3" size = "25" maxlength = "25" style="margin-left:0px;"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="cogpresent3" size = "25" maxlength = "25" style="margin-left:0px;"/>
 </td>
-<td><form:input type="radio" name="NOS3" path="NOS3" value="1" style="margin-left:10px;" />1</td>
-<td>39a<form:input type="radio" name="cogset3" path="cogset3" value="1" style="margin-left:10px;" />1</td>
-<td><form:input type="radio" name="cogset3" path="cogset3" value="2" style="margin-left:10px;" />2</td>
-<td><form:input type="radio" name="cogset3" path="cogset3" value="3" style="margin-left:10px;" />3</td>
+<td><input type="radio" name="NOS3" value="1" style="margin-left:10px;" />1</td>
+<td>39a<input type="radio" name="cogset3" value="1" style="margin-left:10px;" />1</td>
+<td><input type="radio" name="cogset3"  value="2" style="margin-left:10px;" />2</td>
+<td><input type="radio" name="cogset3"  value="3" style="margin-left:10px;" />3</td>
 </tr>
 
 </table>
-<input type = "submit" name="action" value="Submit" style="margin-left:400px;" />
+
 
 
 <p class="footer">
@@ -192,6 +192,7 @@ National Alzheimer's Coordinating Center &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
 <font color ="Black"><b>UDS (V3.0 ,March 2015) Initial Visit</b></font> <font color ="Red"> Form D1 : Clinician Diagnosis</font>
 </p>
 <p class="footer1"> <b>Page 7 of 7</b> </p>
+<input type = "submit" name="action" value="Submit" style="margin-left:400px;" /> 
 </form:form>
 
 

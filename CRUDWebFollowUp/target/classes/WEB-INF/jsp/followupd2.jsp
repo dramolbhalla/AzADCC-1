@@ -134,7 +134,7 @@ during the current visit., previous medical records,procedures,laboratory tests,
 &nbsp;&nbsp;<form:input type="radio" name="cancer" value="1" required ="required" path="cancer" style="margin-left:0px;"/>1&nbsp;&nbsp; Yes, primary/non-metastatic<br>
 &nbsp;&nbsp;<form:input type="radio" name="cancer" value="2" required ="required" path="cancer" style="margin-left:0px;"/>2&nbsp;&nbsp; Yes, metastatic<br>
 &nbsp;&nbsp;<form:input type="radio" name="cancer" value="8" required ="required" path="cancer" style="margin-left:0px;"/>8&nbsp;&nbsp; Not assessed <b> (SKIP TO QUESTION 2)</b><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1a. If yes, specify primary site : <form:input type="text" name="cancsite" required ="required" path="cancsite" style="margin-left:0px; width:200px;"/> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1a. If yes, specify primary site : <form:input type="text" name="cancsite" path="cancsite" style="margin-left:0px; width:200px;"/> 
 </p>
 
 <p class="oddSilver">
@@ -143,11 +143,11 @@ during the current visit., previous medical records,procedures,laboratory tests,
 
 <p class="even">
 2.  Diabetes
-<form:input type="radio" name="Diabetes" value="0" required ="required" path="diabet" style="margin-left:10px;"/>0 No<br />
-<form:input type="radio" name="Diabetes" value="1" required ="required" path="diabet" style="margin-left:90px;"/>1 Yes , Type I<br />
-<form:input type="radio" name="Diabetes" value="2" required ="required" path="diabet" style="margin-left:90px;"/>2 Yes , Type II<br />
-<form:input type="radio" name="Diabetes" value="3" required ="required" path="diabet" style="margin-left:90px;"/>3 Yes , other type <font size=2px>(diabetes insipidus , latent autoimmune diabetes/type 1.5, gestational disbetes)</font><br />
-<form:input type="radio" name="Diabetes" value="9" required ="required" path="diabet" style="margin-left:90px;"/>9 Not assessed or unknown<br />
+<form:input type="radio" name="diabet" value="0" required ="required" path="diabet" style="margin-left:10px;"/>0 No<br />
+<form:input type="radio" name="diabet" value="1" required ="required" path="diabet" style="margin-left:90px;"/>1 Yes , Type I<br />
+<form:input type="radio" name="diabet" value="2" required ="required" path="diabet" style="margin-left:90px;"/>2 Yes , Type II<br />
+<form:input type="radio" name="diabet" value="3" required ="required" path="diabet" style="margin-left:90px;"/>3 Yes , other type <font size=2px>(diabetes insipidus , latent autoimmune diabetes/type 1.5, gestational disbetes)</font><br />
+<form:input type="radio" name="diabet" value="9" required ="required" path="diabet" style="margin-left:90px;"/>9 Not assessed or unknown<br />
 </p>
 <table border = "1" cellpadding="3" cellspacing="0" width="100%" BORDERCOLOR="CornflowerBlue">
  <tr >
@@ -158,27 +158,27 @@ during the current visit., previous medical records,procedures,laboratory tests,
   </tr>
   <tr>
    <td height="40" style="width:70%;">&nbsp;&nbsp;&nbsp;3. Myocardial infarct</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="myocardial" required ="required" path="myoinf" value="0" />&nbsp;0</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="myocardial" required ="required" path="myoinf" value="1" />&nbsp;1</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="myocardial" required ="required" path="myoinf" value="8" />&nbsp;8</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="myoinf" required ="required" path="myoinf" value="0" />&nbsp;0</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="myoinf" required ="required" path="myoinf" value="1" />&nbsp;1</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="myoinf" required ="required" path="myoinf" value="8" />&nbsp;8</td>
   </tr>
   <tr>
    <td height="40" style="width:70%;">&nbsp;&nbsp;&nbsp;4. Congestive heart failure</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="Congestive" required ="required" path="conghrt" value="0" />&nbsp;0</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="Congestive" required ="required" path="conghrt" value="1" />&nbsp;1</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="Congestive" required ="required" path="conghrt" value="8" />&nbsp;8</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="conghrt" required ="required" path="conghrt" value="0" />&nbsp;0</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="conghrt" required ="required" path="conghrt" value="1" />&nbsp;1</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="conghrt" required ="required" path="conghrt" value="8" />&nbsp;8</td>
   </tr>
   <tr>
    <td height="40" style="width:70%;">&nbsp;&nbsp;&nbsp;5. Atrial fibrillation</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="atrial" required ="required" path="afibrill" value="0" />&nbsp;0</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="atrial" required ="required" path="afibrill" value="1" />&nbsp;1</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="atrial" required ="required" path="afibrill" value="8" />&nbsp;8</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="afibrill" required ="required" path="afibrill" value="0" />&nbsp;0</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="afibrill" required ="required" path="afibrill" value="1" />&nbsp;1</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="afibrill" required ="required" path="afibrill" value="8" />&nbsp;8</td>
   </tr>
   <tr>
    <td height="40" style="width:70%;">&nbsp;&nbsp;&nbsp;6. Hypertension</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="tension" required ="required" path="hypert" value="0" />&nbsp;0</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="tension" required ="required" path="hypert" value="1" />&nbsp;1</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="tension" required ="required" path="hypert" value="8" />&nbsp;8</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="hypert" required ="required" path="hypert" value="0" />&nbsp;0</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="hypert" required ="required" path="hypert" value="1" />&nbsp;1</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="hypert" required ="required" path="hypert" value="8" />&nbsp;8</td>
   </tr>
   <tr>
    <td height="40" style="width:70%;">&nbsp;&nbsp;&nbsp;7. Angina</td>
@@ -188,21 +188,21 @@ during the current visit., previous medical records,procedures,laboratory tests,
   </tr>
   <tr>
    <td height="40" style="width:70%;">&nbsp;&nbsp;&nbsp;8. Hypercholesterolemia</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="choles" required ="required" path="hypchol" value="0" />&nbsp;0</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="choles" required ="required" path="hypchol" value="1" />&nbsp;1</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="choles" required ="required" path="hypchol" value="9" />&nbsp;8</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="hypchol" required ="required" path="hypchol" value="0" />&nbsp;0</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="hypchol" required ="required" path="hypchol" value="1" />&nbsp;1</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="hypchol" required ="required" path="hypchol" value="9" />&nbsp;8</td>
   </tr>
   <tr>
    <td height="40" style="width:70%;">&nbsp;&nbsp;&nbsp;9. B12 deficiency</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="B12" required ="required" path="vb12def" value="0" />&nbsp;0</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="B12" required ="required" path="vb12def" value="1" />&nbsp;1</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="B12" required ="required" path="vb12def" value="9" />&nbsp;8</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="vb12def" required ="required" path="vb12def" value="0" />&nbsp;0</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="vb12def" required ="required" path="vb12def" value="1" />&nbsp;1</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="vb12def" required ="required" path="vb12def" value="9" />&nbsp;8</td>
   </tr>
   <tr>
   <td height="40" style="width:70%;">&nbsp;&nbsp;&nbsp;10. thyroid disease</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="thyroid" required ="required" path="thydis" value="0" />&nbsp;0</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="thyroid" required ="required" path="thydis" value="1" />&nbsp;1</td>
-   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="thyroid" required ="required" path="thydis" value="9" />&nbsp;8</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="thydis" required ="required" path="thydis" value="0" />&nbsp;0</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="thydis" required ="required" path="thydis" value="1" />&nbsp;1</td>
+   <td style="width:10%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input type="radio" name="thydis" required ="required" path="thydis" value="9" />&nbsp;8</td>
   </tr>
   </table>
 

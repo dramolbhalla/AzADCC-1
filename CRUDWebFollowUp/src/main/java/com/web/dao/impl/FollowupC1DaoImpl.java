@@ -39,7 +39,7 @@ public class FollowupC1DaoImpl implements FollowupC1Dao{
 
 	@Override
 	public List getAllFollowupC1() {
-		return session.getCurrentSession().createQuery("from C1").list();
+		return session.getCurrentSession().createQuery("from FollowupC1").list();
 	}
 }
 

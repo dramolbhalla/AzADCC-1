@@ -134,7 +134,7 @@ during the current visit., previous medical records,procedures,laboratory tests,
 &nbsp;&nbsp;<form:input type="radio" name="cancer" value="1" required ="required" path="cancer" style="margin-left:0px;"/>1&nbsp;&nbsp; Yes, primary/non-metastatic<br>
 &nbsp;&nbsp;<form:input type="radio" name="cancer" value="2" required ="required" path="cancer" style="margin-left:0px;"/>2&nbsp;&nbsp; Yes, metastatic<br>
 &nbsp;&nbsp;<form:input type="radio" name="cancer" value="8" required ="required" path="cancer" style="margin-left:0px;"/>8&nbsp;&nbsp; Not assessed <b> (SKIP TO QUESTION 2)</b><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1a. If yes, specify primary site : <form:input type="text" name="cancsite" required ="required" path="cancsite" style="margin-left:0px; width:200px;"/> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1a. If yes, specify primary site : <form:input type="text" name="cancsite" path="cancsite" style="margin-left:0px; width:200px;"/> 
 </p>
 
 <p class="oddSilver">

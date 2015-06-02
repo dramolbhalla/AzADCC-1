@@ -39,7 +39,7 @@ public class FollowupB8DaoImpl implements FollowupB8Dao{
 
 	@Override
 	public List getAllFollowupB8() {
-		return session.getCurrentSession().createQuery("from B8").list();
+		return session.getCurrentSession().createQuery("from FollowupB8").list();
 	}
 }
 
