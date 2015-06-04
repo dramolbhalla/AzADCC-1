@@ -94,5 +94,8 @@
     <welcome-file>default.html</welcome-file>
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
+    <welcome-file>entry.html</welcome-file>
+    <welcome-file>entry.htm</welcome-file>
+    <welcome-file>entry.jsp</welcome-file>
   </welcome-file-list>
 </web-app>
