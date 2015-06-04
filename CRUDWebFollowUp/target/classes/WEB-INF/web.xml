@@ -88,9 +88,6 @@
     <welcome-file>login.jsp</welcome-file>
   	<welcome-file>login.html</welcome-file>
   	<welcome-file>login.htm</welcome-file>
-  	<welcome-file>Entry.jsp</welcome-file>
-  	<welcome-file>Entry.html</welcome-file>
-  	<welcome-file>Entry.htm</welcome-file>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
